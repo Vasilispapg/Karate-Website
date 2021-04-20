@@ -1,0 +1,186 @@
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.container{
+    margin:0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+div.header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: auto;
+    width: 50%;
+}
+
+img.logo{   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    max-width: 10%;
+    max-height: 10%;
+}
+
+hr{
+    position: relative;
+    left: 1.5%;
+    margin-top: 0.5em;
+    border-width:1px;
+    width: 50%;
+}
+
+a.pages{
+    font-size:1.2em;
+    padding-left:5%;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    right: 1.5%;
+}
+
+div.row{
+    text-align: center;
+    margin-top: 5%;
+    height:85em;
+    background-color:#F4F4F4;
+}
+
+div.mainIntro{
+    margin-top: -4%;
+}
+
+h1.mainTitle{
+    font-size: 3em;
+    color: #E1300F;
+    padding-top: 1%;
+}
+
+h4.name{
+    color: rgba(0,0,0,0.5);
+}
+
+
+.videos{
+    width: 60%;
+    /* height: auto; */
+    display: block;
+    margin: 0 auto;
+}
+
+
+.more_link {
+    margin-top: 2%;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #E1300F;
+    padding: 0.6em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+.more_link:hover {
+    background-color: #E1300F;
+    color: white;
+  }
+
+p.aboutme{
+    margin-top: 13%;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+img.photo1{
+    float: left;
+}
+
+img.photo3{
+    float: right;
+}
+
+
+  @media screen and (min-width:2000px){
+    /* 2k monitor */
+    div.row{
+        height: 115em;
+    }
+
+    p.aboutme{
+        margin-top: 13%;
+        text-align: center;
+        font-size: 1.4em;
+    }
+    h1.mainTitle{
+        font-size: 5em;
+    }
+
+}
+
+@media screen and (min-width:4000px){
+    /* 4k monitor */
+    div.row{
+        height:110em;
+    }
+
+    h1.mainTitle{
+        font-size: 7em;
+    }
+
+}
+
+  @media screen and (min-width:0px) and (max-width:925px){
+
+    [class*="col-"]{
+        /* kinita */
+        width: 100%;
+    }
+
+    img.logo{
+        max-width: 40%;
+        max-height: 40%;
+        
+    }
+
+    a.more_link{
+        margin-top: 15%;
+        width: 30%;
+    }
+
+    h4.name{
+        margin-top: 10%;
+    }
+
+    hr{
+        width: 100%;
+    }
+
+    a.pages{
+        font-size: 1.5em;
+        padding-left:5%;
+    }
+    
+    h1.mainTitle{
+        padding-top: 2em;
+    }
+
+
+}
