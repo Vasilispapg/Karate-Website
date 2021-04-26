@@ -18,6 +18,17 @@
     height: 100%;
 }
 
+.darkmode--activated a.pages {
+    color: white;
+}
+
+.darkmode--activated h1 , .darkmode--activated .image_alt,.darkmode--activated .story_title{
+    color: rgb(15, 206, 240);
+}
+
+p{
+    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+ }
 /* HEADER */
 
 img.logo{   

@@ -17,6 +17,21 @@
     height: 100%;
 }
 
+.darkmode--activated a.pages{
+    color: white;
+}
+
+.darkmode--activated .qa_header{
+    background-color: black;
+}
+.darkmode--activated .background{
+    filter:invert()
+ }
+
+p{
+    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+ }
+
 img.logo{   
     display: block;
     margin-left: auto;
@@ -55,9 +70,6 @@ hr{
 
 /* Header */
 
-/* .row{
-    display: inline-block;
-} */
 body {
     text-align: center;
 }

@@ -16,6 +16,20 @@
     width: 100%;
     height: 100%;
 }
+.darkmode--activated a.pages{
+    color: white;
+}
+p{
+    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+ }
+
+ .darkmode--activated .qa_header{
+    background-color: black;
+}
+
+.darkmode--activated .background{
+    filter:invert()
+}
 
 img.logo{   
     display: block;

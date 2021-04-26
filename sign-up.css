@@ -20,7 +20,12 @@
     height: 100%;
 }
 
-img.logo{   
+.darkmode--activated a.pages ,.darkmode--activated p{
+    color: white;
+}
+
+img.logo{  
+    isolation: isolate;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -78,7 +83,20 @@ body {
     overflow:hidden;
 }
 
+.darkmode--activated .background{
+    isolation: isolate;
+}
+
+p{
+    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+ }
+
+ .darkmode--activated .background{
+    filter:invert()
+ }
+
 form {
+    
     color:black;
     margin-top: 5%;
     display: inline-block;
@@ -142,9 +160,10 @@ span.birthday, span.gender{
     margin:4% 0%;
 }
 
-.birth_text , .gender_text{
+.gender_text{
   display: none;
 }
+
 
 input[type='submit']{
     border:none;
@@ -163,6 +182,8 @@ input[type='submit']{
 input[type='submit']:hover{
     background-color: red;
 }
+
+
 
 .form_container{
     margin-top: 5%;

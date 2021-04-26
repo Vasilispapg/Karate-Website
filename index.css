@@ -11,17 +11,20 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-@font-face{
-    src:url(fonts/Karate.ttf);
-    font-family: karate;
-}
-
 
 .container{
     margin:0 auto;
     width: 100%;
     height: 100%;
 }
+
+.darkmode--activated a.pages{
+    color: white;
+}
+
+p{
+    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+ }
 
 div.header{
     display: block;
@@ -33,6 +36,7 @@ div.header{
 }
 
 img.logo{   
+    isolation: isolate;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -51,15 +55,17 @@ hr{
 }
 
 a.pages{
+    isolation: isolate;
     font-size:1.2em;
     padding-left:5%;
-    color: black;
+    color: rgb(0,0,0);
     text-decoration: none;
     position: relative;
     right: 1.5%;
 }
 
 div.row{
+    
     text-align: center;
     margin-top: 5%;
     height: auto;
@@ -71,7 +77,7 @@ div.mainIntro{
 }
 
 h1.mainTitle{
-    /* font-family: karate,sans-serif,helvetica,arial; */
+    isolation: isolate;
     font-size: 3em;
     color: #FD150F;
     padding-top: 1%;
@@ -83,6 +89,7 @@ h4.name{
 
 
 .videos{
+    isolation: isolate; /*sto dark mode krataei ta xrwmata toy*/
     width: 60%;
     /* height: auto; */
     display: block;
@@ -91,6 +98,7 @@ h4.name{
 
 
 .more_link {
+    isolation: isolate;
     margin-top: 2%;
     background-color: white; 
     color: black; 

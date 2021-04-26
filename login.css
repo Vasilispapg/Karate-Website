@@ -20,6 +20,21 @@
     height: 100%;
 }
 
+.darkmode--activated a.pages,.darkmode--activated p{
+    color: white;
+}
+.darkmode--activated a.psw{
+    color:black;
+}
+
+.darkmode--activated .background{
+    filter:invert()
+ }
+
+p{
+    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+ }
+
 img.logo{   
     display: block;
     margin-left: auto;
@@ -118,7 +133,7 @@ input[type='password']{
 
 input[type='text']:focus,
 input[type='Password']:focus{
-    border-bottom: 2px solid #FD150F 
+    border-bottom: 2px solid #FD150F;
 }
 
 
@@ -148,14 +163,6 @@ input[type='submit']:hover{
     margin-bottom: 4%;
     display:block;
 }
-
-.form_img{
-    width: 20%;
-    z-index: 2;
-    height: auto;
-}
-
-
 
 
 /* Form */

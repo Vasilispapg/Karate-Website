@@ -16,7 +16,6 @@ skip.addEventListener('click',function(){
     score.innerHTML=scoreCount;
     totalScore.innerHTML = scoreCount;
 });
-
 qa_answer.forEach(function(qaAnswerSignle){
     qaAnswerSignle.addEventListener('click',function(){
         setTimeout(function(){
@@ -24,13 +23,17 @@ qa_answer.forEach(function(qaAnswerSignle){
             duration=0;
         },300);
 
+        var points =Math.floor(100/(qa_quest.length-1));
+
         var valid = this.getAttribute('valid');
         if(valid == 'valid'){
-            scoreCount+=20;
+            scoreCount+=points;
         }
         else{
-            scoreCount-=15;
+            scoreCount-=points;
         }
+        
+        if(scoreCount==99)scoreCount=100;
         score.innerHTML=scoreCount;
         totalScore.innerHTML = scoreCount;
     })
