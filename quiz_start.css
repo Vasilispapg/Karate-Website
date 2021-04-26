@@ -11,14 +11,11 @@
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
 
-
 .container{
     margin:0 auto;
     width: 100%;
     height: 100%;
 }
-
-/* HEADER */
 
 img.logo{   
     display: block;
@@ -56,90 +53,81 @@ hr{
     width: 50%;
 }
 
-/* HEADER */
+/* Header */
 
-.row{
-    margin-top: 1%;
-    background-color: #F4F4F4;
-    font-size: 1em;
-    text-align: left;
+/* .row{
+    display: inline-block;
+} */
+body {
+    text-align: center;
+}
+.background{
+    position: absolute;
+    margin-top:1%;
+    filter: blur(10px);
+    z-index: -1;
+    height: 83%;
+    width: 99%;
+    overflow:hidden;
 }
 
-article.basics{
-    /* padding:0.2% */
-    margin: 0 5%; /*ta kentrarei ola*/
-}
+/* Quiz */
 
-p.story{
-    margin-left:0%;
-    margin-bottom:1%;
-}
 
-.story_title{
-    margin: 1% 0;
-    font-size: 2em;
-}
-
-div.funakoshi{
+.qa_box {
+    color:black;
+    margin-top: 5%;
+    display: inline-block;
+    height:7em;
+    width: 30em;
+    background-color: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,1);
     text-align: center;
 }
 
-.inside_row{
-    /* margin-left:0.3%; */
+.qa_header{
+    background-color: #FD150F;
+    color:white;
     display: flex;
+    justify-content: space-between;
+    margin: -20px 0px 20px;
+    padding: 15px 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.footer{
+    padding: 10px 0 0;
+    text-align: right;
+    position: relative;
+    right: 3%;
+    text-align: center;
+}
+
+.start{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #fd170f7e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.start:hover{
+    background-color:#fd170f;
 }
 
 
-img.funakoshi{
-    width: auto;
-    height: auto;
-    max-width: 37%;
-}
-
-div.therest{
-    margin-top: 15%;
-}
-
-.image_alt{
-    color:#FD150F;
-    text-align:center;
-    font-size: 0.9em;
-}
-
-img#shotokan{
-    margin-top: 2%;
-}
-
-.sec_inside_row{
-    display: flex;
-    /* margin:0 4%; */
-}
-
-p{
-    font-size: 1.1em;
-    margin:0 3% 0 0;
-}
-
-h1,.story,.story_title{
-    color:#FD150F
-}
+/* Quiz */
 
 @media screen and (min-width:2000px){
     /* 2k monitor */
-    .row{
-        height: 68.3em;
-    }
+
 }
 
 @media screen and (min-width:4000px){
     /* 4k monitor */
-    div.funakoshi{
-        margin-top: -5%;
-    }
-
-    .row{
-        height: 80em;
-    }
 
 
 }
@@ -164,9 +152,5 @@ h1,.story,.story_title{
     a.pages{
         font-size: 1.5em;
         padding-left:5%;
-    }
-
-    .row,.inside_row,.sec_inside_row{
-        display: block;
     }
 }

@@ -118,7 +118,7 @@ input[type='password']{
 
 input[type='text']:focus,
 input[type='Password']:focus{
-    border-bottom: 2px solid red 
+    border-bottom: 2px solid #FD150F 
 }
 
 
@@ -132,11 +132,12 @@ input[type='submit']{
     height: 40px;
     color:#fff;
     background-color: #262626;
+    transition: all 0.3s ease-out;
     cursor: pointer;  /* για να δειχνει το ποντικι οτι μπορει να πατηθει το κουμπι*/
 }
 
 input[type='submit']:hover{
-    background-color: red;
+    background-color: #FD150F;
 }
 
 .form_container{

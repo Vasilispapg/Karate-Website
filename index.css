@@ -73,7 +73,7 @@ div.mainIntro{
 h1.mainTitle{
     /* font-family: karate,sans-serif,helvetica,arial; */
     font-size: 3em;
-    color: #E1300F;
+    color: #FD150F;
     padding-top: 1%;
 }
 
@@ -94,7 +94,7 @@ h4.name{
     margin-top: 2%;
     background-color: white; 
     color: black; 
-    border: 2px solid #E1300F;
+    border: 2px solid #FD150F;
     padding: 0.6em;
     text-align: center;
     text-decoration: none;
@@ -104,7 +104,7 @@ h4.name{
   }
   
 .more_link:hover {
-    background-color: #E1300F;
+    background-color: #FD150F;
     color: white;
   }
 

@@ -53,6 +53,132 @@ hr{
     width: 50%;
 }
 
+/* Header */
+
+/* .row{
+    display: inline-block;
+} */
+body {
+    text-align: center;
+}
+.background{
+    position: absolute;
+    margin-top:1%;
+    filter: blur(10px);
+    z-index: -1;
+    height: 83%;
+    width: 99%;
+    overflow:hidden;
+}
+
+/* Quiz */
+
+
+.qa_box {
+    color:black;
+    text-align: left;
+    margin-top: 5%;
+    display: inline-block;
+    height:20em;
+    width: 30em;
+    background-color: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,1);
+}
+
+.qa_header{
+    background-color: #FD150F;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    margin: -20px 0px 20px;
+    padding: 15px 20px;
+    border-radius: 15px 15px 0 0;
+}
+
+.qa_body{
+    margin:0 3%;
+}
+
+.qa_quest{
+    display: none;
+}
+.qa_quest.active{
+    display: block;
+}
+.qa_quest h4{
+    margin: 0 0 15px;
+    font-size: 1.5em;
+}
+
+.qa_answer{
+    position: relative;
+    margin-bottom:10px;
+}
+
+.qa_answer input{
+    opacity: 0;
+    position: absolute;
+    left:0;
+    top:0;
+    height:28px;
+    width: 100%;
+    z-index: 1;
+    cursor:pointer;
+}
+
+.qa_answer span{
+    color:white;
+    display: block;
+    padding: 5px 15px;
+    background-color: rgba(255,0,5,0.5);
+    border-radius: 15px;
+    transition: all 0.3s ease-out;
+    margin-top: 3%;
+    width: auto;
+    height: 20px;
+    /* width: 100%; */
+}
+
+.qa_answer span:hover{
+    background-color: black;
+}
+
+.qa_answer input:checked +span{
+    background-color: gold;
+    color: black;
+}
+
+.qa_answer input[valid]:checked +span{
+    background-color: green;
+    color:white
+}
+
+
+.footer{
+    padding: 10px 0 0;
+    text-align: right;
+    position: relative;
+    right: 3%;
+    /* margin-top: -5%; */
+}
+
+.skip{
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #fd170f7e;
+    color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.skip:hover{
+    background-color:#fd170f;
+}
+
+
+/* Quiz */
+
 @media screen and (min-width:2000px){
     /* 2k monitor */
 
