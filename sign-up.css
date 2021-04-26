@@ -56,14 +56,145 @@ hr{
     width: 50%;
 }
 
-@media screen and (min-width:2000px){
-    /* 2k monitor */
 
+
+/* Form */
+
+body {
+    text-align: center;
 }
 
-@media screen and (min-width:4000px){
-    /* 4k monitor */
+.row{
+    display: inline-block;
+}
 
+.background{
+    position: absolute;
+    margin-top:1%;
+    filter: blur(10px);
+    z-index: -1;
+    height: 83%;
+    width: 99%;
+    overflow:hidden;
+}
+
+form {
+    color:black;
+    margin-top: 5%;
+    display: inline-block;
+    height:25em;
+    background-color: #fff;
+    box-shadow: 0 15px 40px rgba(0,0,0,1);
+}
+
+.container_welcome{
+    height: 3em;
+    text-align: center;
+    position: relative;
+    left:17%;
+    font-size: 1.2em;
+}
+
+.login_text{
+    padding-top: -2%;
+    color:black;
+    font-weight: bold
+}
+
+.welcome_text{
+    color:rgb(139, 134, 134);
+    padding-top:2.5%;
+    font-size: 0.7em;
+}
+
+input[type='text'],
+input[type='password']{
+    width: 50%;
+    border:none;
+    margin-left: 15%;
+    outline:none;
+    border-bottom:2px solid rgba(139, 134, 134,0.7);
+    height: 30px;
+}
+
+input[type='text']:focus,
+input[type='Password']:focus{
+    border-bottom: 2px solid red 
+}
+
+
+span.usr_pass, span.mail_phone{
+    width: 70%;
+    display: flex;
+    margin-bottom: 3%;
+    position: relative;
+    left: 10%;
+}
+
+select {
+    display:inline-flex;
+    width:7em;
+    height:2em;
+} 
+
+span.birthday, span.gender{
+    display: block;
+    margin:4% 0%;
+}
+
+.birth_text , .gender_text{
+  display: none;
+}
+
+input[type='submit']{
+    border:none;
+    outline: none; 
+    width: 50%;
+    position: relative;
+    left:25%;
+    display: block;
+    height: 40px;
+    color:#fff;
+    background-color: #262626;
+    cursor: pointer;  /* για να δειχνει το ποντικι οτι μπορει να πατηθει το κουμπι*/
+}
+
+input[type='submit']:hover{
+    background-color: red;
+}
+
+.form_container{
+    margin-top: 5%;
+}
+
+.username, .passw, .login{
+    margin-bottom: 4%;
+    display:block;
+}
+
+.form_img{
+    width: 20%;
+    z-index: 2;
+    height: auto;
+}
+
+/* Form */
+
+
+@media screen and (min-width:2000px){
+    /* 2k monitor */
+    .background{
+        content:url("");
+        left:-20%;
+        background-image:url(/images/dokimastiko2.jpg);
+        width: 120%;
+        background-repeat:no-repeat;
+        height: 84%;
+    }
+
+    p{
+        font-size: 1.4em;
+    }
 
 }
 
@@ -73,6 +204,7 @@ hr{
         /* kinita */
         width: 100%;
     }
+    
 
     img.logo{
         max-width: 40%;
@@ -88,4 +220,27 @@ hr{
         font-size: 1.5em;
         padding-left:5%;
     }
+
+    .container_welcome{
+        left:0
+    }
+
+
+    .form{
+        margin-top: 25%;
+    }
+
+    .form_container{
+        margin-top: 10%;
+    }
+
+    .background{
+        content:url("");
+        left:-20%;
+        background-image:url(/images/dokimastiko.jpg);
+        width: 120%;
+        background-repeat:repeat-y;
+        height: 82%;
+    }
+
 }

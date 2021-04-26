@@ -18,6 +18,8 @@
     height: 100%;
 }
 
+/* HEADER */
+
 img.logo{   
     display: block;
     margin-left: auto;
@@ -54,30 +56,36 @@ hr{
     width: 50%;
 }
 
+/* HEADER */
+
 .row{
     margin-top: 1%;
     background-color: #F4F4F4;
+    font-size: 1em;
+    text-align: left;
 }
 
 article.basics{
-    padding:0.2%
+    /* padding:0.2% */
+    margin: 0 5%; /*ta kentrarei ola*/
+}
+
+p.story{
+    margin-left:0%;
+    margin-bottom:1%;
 }
 
 .story_title{
+    margin: 1% 0;
     font-size: 2em;
-}
-
-.row{
-    font-size: 1em;
-    text-align: left;
-    margin-bottom: 10%;
 }
 
 div.funakoshi{
     text-align: center;
 }
 
-.first_row{
+.inside_row{
+    /* margin-left:0.3%; */
     display: flex;
 }
 
@@ -85,7 +93,7 @@ div.funakoshi{
 img.funakoshi{
     width: auto;
     height: auto;
-    max-width: 40%;
+    max-width: 37%;
 }
 
 div.therest{
@@ -99,34 +107,38 @@ div.therest{
 }
 
 img#shotokan{
-    /* display: none; */
-    margin-top: -10%;
+    margin-top: 2%;
 }
 
+.sec_inside_row{
+    display: flex;
+    /* margin:0 4%; */
+}
 
 p{
-    font-size: 1.2em;
+    font-size: 1.1em;
+    margin:0 3% 0 0;
 }
 
-
-
+h1,.story,.story_title{
+    color:#E1300F
+}
 
 @media screen and (min-width:2000px){
     /* 2k monitor */
-    div.funakoshi{
-        margin-top: -10%;
+    .row{
+        height: 68.3em;
     }
-
-    div.therest{
-        margin-top:20%
-    }
-
 }
 
 @media screen and (min-width:4000px){
     /* 4k monitor */
     div.funakoshi{
         margin-top: -5%;
+    }
+
+    .row{
+        height: 80em;
     }
 
 
@@ -154,7 +166,7 @@ p{
         padding-left:5%;
     }
 
-    .first_row{
+    .row,.inside_row,.sec_inside_row{
         display: block;
     }
 }

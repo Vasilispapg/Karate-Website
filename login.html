@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>JKA Karate</title>
-        <link rel="stylesheet" href="basics.css">
+        <link rel="stylesheet" href="login.css">
         <meta charset="UTF8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"
     </head>
@@ -21,12 +21,31 @@
                     <a class="pages" href="sign-up.html" >Sign Up</a>
                 </nav>
             </div>
-
-            <div class="row">
-              
+            <div class="background">
+                <img src='images/dokimastiko.jpg'>
             </div>
-            <div class="footer">
-
+            <div class="row col-12">
+                <form class="form col-4" ction="action_page.php" method="post">
+                    <div class="container_welcome col-8">
+                        <p class="welcome_text">Welcome back!</p>
+                        <p class="login_text">Login your account</p>
+                    </div>
+                    <div class="form_container col-12">
+                        <span class="username ">
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+                        </span>
+                        <span class="passw">
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                        </span>
+                        <span class='login col-12'>
+                            <input type="submit"></input>
+                            <label>
+                        </span>
+                        <span class="cancel_forgot">
+                            <span class="psw"><a href="#">Ξεχάσατε τον κωδικό σας password?</a></span>
+                        </span>
+                    </div>
+                </form>
             </div>
         </div>
 </html>
