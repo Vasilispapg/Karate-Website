@@ -100,7 +100,7 @@ body {
 }
 
 .qa_header{
-    background-color: #FD150F;
+    background-color: #b19b75;
     color:white;
     display: flex;
     justify-content: space-between;
@@ -144,7 +144,7 @@ body {
     color:white;
     display: block;
     padding: 5px 15px;
-    background-color: rgba(255,0,5,0.5);
+    background-color: #e97c28;
     border-radius: 15px;
     transition: all 0.3s ease-out;
     margin-top: 3%;
@@ -158,7 +158,7 @@ body {
 }
 
 .qa_answer input:checked +span{
-    background-color: gold;
+    background-color: red;
     color: black;
 }
 
@@ -179,7 +179,7 @@ body {
 .skip{
     display: inline-block;
     padding: 8px 20px;
-    background-color: #fd170f7e;
+    background-color: #b19b75;
     color: #fff;
     border-radius: 15px;
     cursor: pointer;
@@ -187,7 +187,7 @@ body {
 }
 
 .skip:hover{
-    background-color:#fd170f;
+    background-color:#e79b18;
 }
 
 

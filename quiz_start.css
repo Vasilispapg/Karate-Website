@@ -98,7 +98,7 @@ body {
 }
 
 .qa_header{
-    background-color: #FD150F;
+    background-color: #b19b75;
     color:white;
     display: flex;
     justify-content: space-between;
@@ -118,7 +118,7 @@ body {
 .start{
     display: inline-block;
     padding: 8px 20px;
-    background-color: #fd170f7e;
+    background-color: #b19b75;
     color: #fff;
     text-decoration: none;
     border-radius: 15px;
@@ -127,7 +127,7 @@ body {
 }
 
 .start:hover{
-    background-color:#fd170f;
+    background-color:#e79b18;
 }
 
 

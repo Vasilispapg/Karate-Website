@@ -9,13 +9,15 @@ var duration=0;
 var qa_quest = document.querySelectorAll('.qa_quest');
 var qa_answer = document.querySelectorAll('.qa_quest .qa_answer input');
 
+var points =Math.round(100/(qa_quest.length-1));
+
 skip.addEventListener('click',function(){
     step();
     duration=0
-    scoreCount-=15;
-    score.innerHTML=scoreCount;
-    totalScore.innerHTML = scoreCount;
+    scoreCount-=(points-10);
+    checks_for_points();
 });
+
 qa_answer.forEach(function(qaAnswerSignle){
     qaAnswerSignle.addEventListener('click',function(){
         setTimeout(function(){
@@ -23,21 +25,19 @@ qa_answer.forEach(function(qaAnswerSignle){
             duration=0;
         },300);
 
-        var points =Math.floor(100/(qa_quest.length-1));
-
         var valid = this.getAttribute('valid');
         if(valid == 'valid'){
             scoreCount+=points;
         }
         else{
-            scoreCount-=points;
+            scoreCount-=(points-10);
         }
         
-        if(scoreCount==99)scoreCount=100;
-        score.innerHTML=scoreCount;
-        totalScore.innerHTML = scoreCount;
+        checks_for_points();
     })
 })
+
+
 
 function step(){
     count+=1;
@@ -45,7 +45,7 @@ function step(){
         qa_quest[i].className='qa_quest';
     }
     qa_quest[count].className='qa_quest active';
-    if(count==3){
+    if(count==qa_quest.length-1){
         skip.style.display='none';
         document.getElementById('qa_box').style.height='6em';
         clearInterval(durationTime);
@@ -61,8 +61,15 @@ var durationTime = setInterval(function(){
     timer.innerHTML=duration;
     if(timer.innerHTML =="0"){
         step();
-        scoreCount-=15;
-        score.innerHTML=scoreCount;
-        totalScore.innerHTML = scoreCount;
+        scoreCount-=(points-10);
+        checks_for_points();
     }
 },1000)
+
+function checks_for_points(){
+    if(scoreCount==99)scoreCount=100;
+    if(scoreCount>100)scoreCount=100;
+    if(scoreCount<0)scoreCount=0;
+    score.innerHTML=scoreCount;
+    totalScore.innerHTML = scoreCount;
+} 

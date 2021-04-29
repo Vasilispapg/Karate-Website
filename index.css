@@ -35,8 +35,9 @@ div.header{
     width: 50%;
 }
 
+
 img.logo{   
-    isolation: isolate;
+    /* isolation: isolate; */
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -142,6 +143,11 @@ img.photo1{
 img.photo3{
     float: right;
 }
+
+span.social_media{
+    display: flex;
+}
+
 
 
   @media screen and (min-width:2000px){
