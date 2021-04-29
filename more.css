@@ -18,6 +18,10 @@
     height: 100%;
 }
 
+.darkmode{
+   z-index: 500;
+}
+
 .darkmode--activated a.pages{
    color: white;
 }
@@ -342,15 +346,18 @@ p{
    #slide5:checked ~ #controls label:nth-last-child(4),
    #slide6:checked ~ #controls label:nth-last-child(3), 
    #slide7:checked ~ #controls label:nth-last-child(2){
-      margin: -5% -27% 0 -18%;
+      margin: -5% -18% 0 -18%;
     }
 
     #slides {
        max-width: 350px;
-       margin: 0 5%;
+       margin: 0 0%;
+      
     }
 
     #slider {
+       margin-right: auto;
+         margin-left: 0%;
         width: 85%;
     }
     

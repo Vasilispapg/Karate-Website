@@ -208,7 +208,7 @@ input[type='submit']:hover{
     .background{
         content:url("");
         left:-20%;
-        background-image:url(/images/dokimastiko2.jpg);
+        background-image:url(/images/background2.jpg);
         width: 120%;
         background-repeat:no-repeat;
         height: 84%;
@@ -224,7 +224,7 @@ input[type='submit']:hover{
         margin-top: -2%;
     }
     .container_welcome{
-        margin-top: -2%;
+        margin-top: -3%;
     }
 
 }
@@ -258,17 +258,17 @@ input[type='submit']:hover{
 
 
     .form{
-        margin-top: 25%;
+        margin-top: 10%;
     }
 
     .form_container{
-        margin-top: 10%;
+        /* margin-top: 10%; */
     }
 
     .background{
         content:url("");
         left:-20%;
-        background-image:url(/images/dokimastiko.jpg);
+        background-image:url(/images/background.jpg);
         width: 120%;
         background-repeat:repeat-y;
         height: 82%;
