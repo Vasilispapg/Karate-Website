@@ -208,7 +208,7 @@ input[type='submit']:hover{
     .background{
         content:url("");
         left:-20%;
-        background-image:url(/images/background2.jpg);
+        background-image:url(/media/background2.jpg);
         width: 120%;
         background-repeat:no-repeat;
         height: 84%;
@@ -268,7 +268,7 @@ input[type='submit']:hover{
     .background{
         content:url("");
         left:-20%;
-        background-image:url(/images/background.jpg);
+        background-image:url(/media/background.jpg);
         width: 120%;
         background-repeat:repeat-y;
         height: 82%;

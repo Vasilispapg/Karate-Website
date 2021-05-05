@@ -191,19 +191,6 @@ body {
 }
 
 
-/* Quiz */
-
-@media screen and (min-width:2000px){
-    /* 2k monitor */
-
-}
-
-@media screen and (min-width:4000px){
-    /* 4k monitor */
-
-
-}
-
 @media screen and (min-width:0px) and (max-width:925px){
 
     [class*="col-"]{
