@@ -87,6 +87,11 @@ body {
     isolation: isolate;
 }
 
+.darkmode--activated image#label_name{
+    isolation: isolate;
+    background-color: #262626;
+}
+
 p{
     font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
  }
@@ -100,7 +105,7 @@ form {
     color:black;
     margin-top: 5%;
     display: inline-block;
-    height:25em;
+    height:30em;
     background-color: #fff;
     box-shadow: 0 15px 40px rgba(0,0,0,1);
 }
@@ -164,6 +169,13 @@ span.birthday, span.gender{
   display: none;
 }
 
+p#error{
+    color:red;
+    font-size: 1.5em;
+    /* display: none; */
+    isolation: isolate;
+}
+
 
 input[type='submit']{
     border:none;
@@ -179,10 +191,38 @@ input[type='submit']{
     cursor: pointer;  /* για να δειχνει το ποντικι οτι μπορει να πατηθει το κουμπι*/
 }
 
+input.file {
+	border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  /* white-space: nowrap; */
+  width: 1px;
+}
+
+input.file + label {
+    font-size: 1.1em;
+    margin-bottom: 2%;
+    margin-top: -3%;
+    color: white;
+    background-color: #262626;
+    padding: 1.5%;
+    display: inline-block;
+    transition: all 0.3s ease-out;
+}
+
+
+input.file + label:hover {
+    padding: 0.5%;
+    background-color: red;
+    cursor: pointer; 
+}
+
 input[type='submit']:hover{
     background-color: red;
 }
-
 
 
 .form_container{
@@ -259,10 +299,7 @@ input[type='submit']:hover{
 
     .form{
         margin-top: 10%;
-    }
-
-    .form_container{
-        /* margin-top: 10%; */
+        height: 35em;
     }
 
     .background{
