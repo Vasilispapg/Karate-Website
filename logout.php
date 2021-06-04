@@ -4,6 +4,6 @@
 
    // destroy the session
    session_destroy();
-   echo 'You have cleaned session';
-   header('Refresh: 2; URL = index.php');
+   // echo 'You have cleaned session';
+   header("location:index.php");
 ?>
