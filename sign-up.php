@@ -1,6 +1,6 @@
 <?php
 
-    $user = $_POST['uname'];
+    $user = $_POST['uname']; 
     $psw=$_POST['psw'];
     $phone=$_POST['phone'];
     $email=$_POST['email'];
@@ -34,7 +34,7 @@
         
             mysqli_query($con,$sql);
             
-            //echo "{$user},{$psw},{$email},{$phone},{$bfull},{$sex}";
+            // echo "{$user},{$psw},{$email},{$phone},{$bfull},{$sex}";
             mysqli_close($con);
             header("location:index.html");
         }  
