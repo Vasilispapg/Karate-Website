@@ -1,3 +1,6 @@
+<?php
+session_start();?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,11 +17,20 @@
                 </div>
                 <hr>
                 <nav id="pages">
-                    <a class="pages" href="basics.html" >Basics</a>
-                    <a class="pages" href="more.html" >More</a>
-                    <a class="pages" href="quiz_start.html" >Quiz</a>
-                    <a class="pages" href="login.html" >Login</a>
-                    <a class="pages" href="sign-up.html" >Sign Up</a>
+                    <a class="pages" href="basics.php" >Basics</a>
+                    <a class="pages" href="more.php" >More</a>
+                    <a class="pages" href="quiz_start.php" >Quiz</a>
+                    <?php 
+                            if(!isset($_SESSION['username'])){
+                                echo "<a class=\"pages\" href=\"login.html\">Login</a>";
+                                echo"<a class=\"pages\" href=\"sign-up.html\">Sign Up</a>"; 
+                            }
+                                ?>
+                        <?php if(isset($_SESSION['username'])){
+                                echo "<a class=\"pages\"href=\"logout.php\">Logout</a>"; 
+                                echo $_SESSION['username'];
+                        }
+                        ?>
                 </nav>
             </div>
             <div class="row">

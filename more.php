@@ -1,30 +1,42 @@
-<!DOCTYPE html>
-<html>
+<?php
+session_start();?>
+    <!DOCTYPE html>
+    <html>
+
     <head>
         <title>JKA Karate</title>
         <link rel="stylesheet" href="styles/more.css">
         <meta charset="UTF8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"
-    </head>
-    <body>
-        <div class="container">
-            <div class="header">
-                <div id="logo">
-                    <a href="index.html"><img class="logo" src="media\logo.png"></a>
-                </div>
-                <hr>
-                <nav id="pages">
-                    <a class="pages" href="basics.html" >Basics</a>
-                    <a class="pages" href="more.html" >More</a>
-                    <a class="pages" href="quiz_start.html" >Quiz</a>
-                    <a class="pages" href="login.html" >Login</a>
-                    <a class="pages" href="sign-up.html" >Sign Up</a>
-                </nav>
-            </div>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" </head>
 
-            <div class="row">
-                <article>
-                    <span class="first_row">
+        <body>
+            <div class="container">
+                <div class="header">
+                    <div id="logo">
+                        <a href="index.html"><img class="logo" src="media\logo.png"></a>
+                    </div>
+                    <hr>
+                    <nav id="pages">
+                        <a class="pages" href="basics.php">Basics</a>
+                        <a class="pages" href="more.php">More</a>
+                        <a class="pages" href="quiz_start.php">Quiz</a>
+                        <?php 
+                            if(!isset($_SESSION['username'])){
+                                echo "<a class=\"pages\" href=\"login.html\">Login</a>";
+                                echo"<a class=\"pages\" href=\"sign-up.html\">Sign Up</a>"; 
+                            }
+                                ?>
+                        <?php if(isset($_SESSION['username'])){
+                                echo "<a class=\"pages\"href=\"logout.php\">Logout</a>"; 
+                                echo $_SESSION['username'];
+                        }
+                        ?>
+                    </nav>
+                </div>
+
+                <div class="row">
+                    <article>
+                        <span class="first_row">
                         <h1 class="title">Zenkutsu Dachi</h1>
                         <span class="dachi">
                             <p class="col-4 zenkutsu" id="zenkutsu">Αρχικά θα ξεκινήσουμε με την στάση που κρατάμε κατά την διάρκεια εξάσκησης
@@ -64,9 +76,9 @@
                                     <label for="slide3"></label>
                                 </div>
                             </div>
-                        </span> 
-                    </span>
-                    <span class="sec_row">    
+                        </span>
+                        </span>
+                        <span class="sec_row">    
                         <h1 class="title">Zuki</h1>
                         <span class="zuki">
                             <p class="col-4 zenkutsu" id="zenkutsu">Zuki είναι η ιαπωνική ονομασίας της μπουνιάς, υπάρχουν πολλών ειδών zuki, αλλά θα αναφερθώ μόνο στα βασικά.
@@ -111,9 +123,9 @@
                                     <label for="slide7"></label>
                                 </div>
                             </div>
-                        </span> 
-                    </span>
-                    <span class="third_row">    
+                        </span>
+                        </span>
+                        <span class="third_row">    
                         <h1 class="title">Geri</h1>
                         <span class="geri">
                             <p class="col-4 geri" id="geri">Geri είναι η ιαπωνική ονομασίας της κλωτσιάς, όπως και στα Zuki έτσι και στις Geri υπάρχουν πολλές διαφορετικές χρήσεις. Οι βασικές τεχνικές που μαθαίνει ενας αρχάριο για τις geri είναι οι
@@ -158,12 +170,13 @@
                                     <label for="slide11"></label>
                                 </div>
                             </div>
-                        </span> 
-                    </span>
-                </article>
+                        </span>
+                        </span>
+                    </article>
+                </div>
             </div>
-        </div>
-    </body>
-    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-    <script src='scripts/darkmode.js'></script>
-</html>
+        </body>
+        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+        <script src='scripts/darkmode.js'></script>
+
+    </html>
