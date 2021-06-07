@@ -118,10 +118,12 @@ hr {
     text-align: left;
 }
 
-.profile_picture {
+.profile_picture_edit {
     /* overflow: hidden; */
     position: relative;
-    /* top: 50px; */
+    width: 17em;
+    top: 23em;
+    right: 25em;
     height: 25em;
 }
 
@@ -131,7 +133,7 @@ div.profile {
     border-radius: 30px;
     margin: 0 auto;
     padding: 3%;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 span.info {
@@ -145,7 +147,7 @@ span.info {
 .profiles {
     position: relative;
     width: 100%;
-    margin-left: 2%;
+    margin-right: 20%;
 }
 
 .role {
@@ -235,12 +237,10 @@ input.file {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding: 0;
-    position: absolute !important;
-    /* white-space: nowrap; */
+    position: relative;
     width: 1px;
-    margin-left: 5%;
 }
 
 input.file+label {
@@ -250,7 +250,7 @@ input.file+label {
     background-color: #262626;
     padding: 1.5%;
     position: relative;
-    left: 25%;
+    left: 4em;
     transition: all 0.3s ease-out;
 }
 
@@ -258,6 +258,12 @@ input.file+label:hover {
     padding: 0.5%;
     background-color: red;
     cursor: pointer;
+}
+
+p.error {
+    color: red;
+    font-size: 1.5em;
+    /* margin-top: -7%; */
 }
 
 @media screen and (min-width:0px) and (max-width:925px) {

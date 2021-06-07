@@ -7,7 +7,8 @@ session_start();?>
         <title>JKA Karate</title>
         <link rel="stylesheet" href="styles/quiz_start.css">
         <meta charset="UTF8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
         <body>
             <div class="container">
@@ -15,23 +16,37 @@ session_start();?>
                     <div id="logo">
                         <a href="index.php"><img class="logo" src="media\logo.png"></a>
                     </div>
-                    <hr>
-                    <nav id="pages">
-                        <a class="pages" href="basics.php">Basics</a>
-                        <a class="pages" href="more.php">More</a>
-                        <a class="pages" href="quiz_start.php">Quiz</a>
-                        <?php 
-                            if(!isset($_SESSION['username'])){
-                                echo "<a class=\"pages\" href=\"login.html\">Login</a>";
-                                echo"<a class=\"pages\" href=\"sign-up.html\">Sign Up</a>"; 
-                            }
-                                ?>
-                        <?php if(isset($_SESSION['username'])){
-                                echo "<a class=\"pages\"href=\"profile.php\">Profile</a>"; 
-                                echo "<a class=\"pages\" href=\"logout.php\">Logout</a>";
-                        }
-                        ?>
-                    </nav>
+                    <?php
+            if(isset($_SESSION['role'])&&$_SESSION['role']==3){
+               echo" <hr style=\"width:75%;\" >";
+            }
+            else{
+               echo "<hr>";
+            }
+            ?>
+            <nav id="pages">
+                <a class="pages" href="basics.php">Basics</a>
+                <a class="pages" href="more.php">More</a>
+                <a class="pages" href="quiz_start.php">Quiz</a>
+                <?php
+                if (!isset($_SESSION['username'])) {
+                    echo "<a class=\"pages\" href=\"login.html\">Login</a>";
+                    echo "<a class=\"pages\" href=\"sign-up.html\">Sign Up</a>";
+                }
+                ?>
+                <?php if (isset($_SESSION['username'])) {
+                    echo "<a class=\"pages\"href=\"profile.php\">Profile</a>";
+                    echo "<a class=\"pages\" href=\"logout.php\">Logout</a>";
+                    if($_SESSION['role']==2){
+                        echo "<a class=\"pages\" href=\"logout.php\">Edit</a>";
+                    }
+                    else if($_SESSION['role']==3){
+                        echo "<a class=\"pages\" href=\"logout.php\">Users</a>";
+                        echo "<a class=\"pages\" href=\"logout.php\">Edit</a>";
+                    }
+                }
+                ?>
+            </nav>
                 </div>
 
                 <div class="row">

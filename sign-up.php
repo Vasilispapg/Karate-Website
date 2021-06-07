@@ -1,7 +1,5 @@
 <?php
 
-
-    
     $user = $_POST['uname']; 
     $psw=$_POST['psw'];
     $phone=$_POST['phone'];
@@ -21,12 +19,8 @@
     }
     else{
         // Check file size
-        if ($_FILES["image"]["size"] > 5000000) {
+        if ($_FILES["image"]["size"] > 50000000) {
             echo "Sorry, your file is too large.";
-        }
-        if($bday==0 || $bmonth==0 || $byear==0){
-            header("location:sign-up-error.html");
-            mysqli_close($con);
         }
         else{
             $bfull="{$bday}-{$bmonth}-{$byear}";
@@ -43,10 +37,8 @@
                 $msg = "Failed to upload image";
             }
 
-            // echo "{$user},{$psw},{$email},{$phone},{$bfull},{$sex}";
             mysqli_close($con);
-            include 'usrlogin.php'; //ektelei me tin mia to login
-            header("location:index.php");
+            // include 'usrlogin.php'; //ektelei me tin mia to login
         }  
     }
 

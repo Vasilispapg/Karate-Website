@@ -242,7 +242,6 @@ input.file {
     overflow: hidden;
     padding: 0;
     position: absolute !important;
-    /* white-space: nowrap; */
     width: 1px;
 }
 
