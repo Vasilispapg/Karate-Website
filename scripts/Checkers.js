@@ -27,10 +27,8 @@ function checkName(str) { //elegxei an yparxei to onoma se database
             checker();
         }
     }
-
     xmlhttp.open("GET", "check-name.php?user=" + str, true);
     xmlhttp.send();
-
 }
 
 function checker() {

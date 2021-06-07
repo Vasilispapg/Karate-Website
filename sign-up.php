@@ -1,5 +1,7 @@
 <?php
 
+
+    
     $user = $_POST['uname']; 
     $psw=$_POST['psw'];
     $phone=$_POST['phone'];
@@ -8,12 +10,14 @@
     $bmonth=$_POST['birthday_month'];
     $byear=$_POST['birthday_year'];
     $sex=$_POST['sex'];
-    // $img=$_FILES['image'];
+
+    $img=$_FILES['image']['name'];
+    $target = "images/".basename($img);
 
     $con = mysqli_connect("localhost","root","");
 
     if(!$con){
-        echo "problem";
+        die("Connection failed: " . mysqli_connect_error());
     }
     else{
         // Check file size
@@ -28,15 +32,21 @@
             $bfull="{$bday}-{$bmonth}-{$byear}";
 
             mysqli_select_db($con,"karate");
-            $sql="INSERT INTO users (username,passwords,email,phone,bdate,sex)
-            VALUES ('$user','$psw','$email','$phone','$bfull','$sex')";
-            //VALUES ('$user','$psw','$email','$phone','$bfull','$sex','$img')");
+            $sql="INSERT INTO users (username,passwords,email,phone,bdate,sex,image,role)
+            VALUES ('$user','$psw','$email','$phone','$bfull','$sex','$img','1')";
         
             mysqli_query($con,$sql);
-            
+
+            if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
+                $msg = "Image uploaded successfully";
+            }else{
+                $msg = "Failed to upload image";
+            }
+
             // echo "{$user},{$psw},{$email},{$phone},{$bfull},{$sex}";
             mysqli_close($con);
-            header("location:index.html");
+            include 'usrlogin.php'; //ektelei me tin mia to login
+            header("location:index.php");
         }  
     }
 

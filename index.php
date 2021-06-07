@@ -30,8 +30,8 @@ session_start();
                             }
                                 ?>
                         <?php if(isset($_SESSION['username'])){
-                                echo "<a class=\"pages\"href=\"logout.php\">Logout</a>"; 
-                                echo $_SESSION['username'];
+                                echo "<a class=\"pages\"href=\"profile.php\">Profile</a>"; 
+                                echo "<a class=\"pages\" href=\"logout.php\">Logout</a>";
                         }
                         ?>
                     </nav>
@@ -44,7 +44,7 @@ session_start();
                     <video class="videos" autoplay preload="auto" muted loop>
                     <source src="media\video\intro_vi.mp4" type="video/mp4">
                 </video>
-                    <a href="more.html" class="col-1 more_link button">Learn More</a>
+                    <a href="more.php" class="col-1 more_link button">Learn More</a>
                     <span class="introduction">
                     <p class="aboutme col-4">Καλώς ήρθατε στην σελίδα μου, ονομάζομαι Βασίλειος Σάββας Παπαγρηγορίου 1 Dan J.K.A., απο την σχολη Rhodes Shotokan Karate. Ξεκίνησα την πορία με το
                         JKA Karate από το 2012, ενώ παλιότερα εξασκούσα για 6 χρόνια την τέχνη Brazilian ju-jichu.<br>

@@ -14,7 +14,7 @@ session_start();?>
         <div class="container">
             <div class="header">
                 <div id="logo">
-                    <a href="index.html"><img class="logo" src="media\logo.png"></a>
+                    <a href="index.php"><img class="logo" src="media\logo.png"></a>
                 </div>
                 <hr>
                 <nav id="pages">
@@ -28,8 +28,8 @@ session_start();?>
                             }
                                 ?>
                         <?php if(isset($_SESSION['username'])){
-                                echo "<a class=\"pages\"href=\"logout.php\">Logout</a>"; 
-                                echo $_SESSION['username'];
+                                echo "<a class=\"pages\"href=\"profile.php\">Profile</a>"; 
+                                echo "<a class=\"pages\" href=\"logout.php\">Logout</a>";
                         }
                         ?>
                 </nav>

@@ -1,43 +1,78 @@
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
+.col-1 {
+    width: 8.33%;
+}
 
+.col-2 {
+    width: 16.66%;
+}
 
-.container{
-    margin:0 auto;
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
     width: 100%;
     height: 100%;
 }
 
-.darkmode{
-   z-index: 500;
+.darkmode {
+    z-index: 500;
 }
 
-.darkmode--activated a.pages{
-   color: white;
+.darkmode--activated a.pages {
+    color: white;
 }
 
-.darkmode--activated #slides{
-   border: 3px solid black;
-   background: black;
+.darkmode--activated #slides {
+    border: 3px solid black;
+    background: black;
 }
 
-.darkmode--activated #controls label{
-   filter:invert()
+.darkmode--activated #controls label {
+    filter: invert()
 }
 
 
 /* HEADER */
-img.logo{   
+
+img.logo {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -47,16 +82,16 @@ img.logo{
     max-height: 10%;
 }
 
-a.pages{
-    font-size:1.2em;
-    padding-left:5%;
+a.pages {
+    font-size: 1.2em;
+    padding-left: 5%;
     color: black;
     text-decoration: none;
     position: relative;
     right: 1.5%;
 }
 
-div.header{
+div.header {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -65,324 +100,319 @@ div.header{
     width: 50%;
 }
 
-hr{
+hr {
     position: relative;
     left: 1.5%;
     margin-top: 0.5em;
-    border-width:1px;
+    border-width: 1px;
     width: 50%;
 }
+
 
 /* HEADER */
 
 
 /* slider */
+
 #slider {
     margin: -2% auto;
     width: 500px;
     max-width: 100%;
     height: 100%;
     text-align: center;
- }
+}
 
- #slider input[type=radio] {
+#slider input[type=radio] {
     display: none;
- }
+}
 
- #slider label {
-    cursor:pointer;
+#slider label {
+    cursor: pointer;
     text-decoration: none;
- }
+}
 
- #slides{
+#slides {
     padding: 10px;
     border: 3px solid #ccc;
     background: #fff;
     position: relative;
     z-index: 1;
- }
+}
 
- #overflow {
+#overflow {
     width: 100%;
     overflow: hidden;
- }
- #slide1:checked ~ #slides .inner,#slide4:checked ~ #slides .inner,#slide8:checked ~ #slides .inner {
+}
+
+#slide1:checked~#slides .inner,
+#slide4:checked~#slides .inner,
+#slide8:checked~#slides .inner {
     margin-left: 0;
- }
- #slide2:checked ~ #slides .inner ,#slide5:checked ~ #slides .inner ,#slide9:checked ~ #slides .inner{
+}
+
+#slide2:checked~#slides .inner,
+#slide5:checked~#slides .inner,
+#slide9:checked~#slides .inner {
     margin-left: -100%;
- }
- #slide3:checked ~ #slides .inner , #slide6:checked ~ #slides .inner,#slide10:checked ~ #slides .inner {
+}
+
+#slide3:checked~#slides .inner,
+#slide6:checked~#slides .inner,
+#slide10:checked~#slides .inner {
     margin-left: -200%;
- }
+}
 
- #slide7:checked ~ #slides .inner, #slide11:checked ~ #slides .inner{
+#slide7:checked~#slides .inner,
+#slide11:checked~#slides .inner {
     margin-left: -300%;
- }
+}
 
-
- #slides .inner {
+#slides .inner {
     transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
     width: 400%;
     line-height: 0;
     height: 300px;
- }
+}
 
- #slides .slide {
+#slides .slide {
     width: 25%;
-    float:left;
+    float: left;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:100%;
+    height: 100%;
     color: #fff;
- }
- #slides .slide_1{
+}
+
+#slides .slide_1 {
     background: #00171F;
- }
- #slides .slide_2{
+}
+
+#slides .slide_2 {
     background: #003459;
-  }
+}
 
- #slides .slide_2b,#slides .slide_3, #slides .slide_4, #slides .slide_9{
+#slides .slide_2b,
+#slides .slide_3,
+#slides .slide_4,
+#slides .slide_9 {
     background: #fff;
- }
+}
 
-
- #controls  {
+#controls {
     margin: -180px 0 0 0;
     width: 100%;
     height: 50px;
     z-index: 3;
     position: relative;
- }
- 
- #controls label {
+}
+
+#controls label {
     transition: opacity 0.2s ease-out;
     display: none;
     width: 50px;
     height: 50px;
     opacity: .4;
- }
+}
 
- #controls label:hover{
+#controls label:hover {
     opacity: 1;
- }
+}
 
- #slide1:checked ~ #controls label:nth-child(2),
- #slide2:checked ~ #controls label:nth-child(3),
- #slide3:checked ~ #controls label:nth-child(1),
+.darkmode-toggle {
+    z-index: 2;
+}
 
- #slide8:checked ~ #controls label:nth-child(2),
- #slide9:checked ~ #controls label:nth-child(3),
- #slide10:checked ~ #controls label:nth-child(4),
- #slide11:checked ~ #controls label:nth-child(1),
-
- #slide4:checked ~ #controls label:nth-child(2),
- #slide5:checked ~ #controls label:nth-child(3),
- #slide6:checked ~ #controls label:nth-child(4),
- #slide7:checked ~ #controls label:nth-child(1) {
+#slide1:checked~#controls label:nth-child(2),
+#slide2:checked~#controls label:nth-child(3),
+#slide3:checked~#controls label:nth-child(1),
+#slide8:checked~#controls label:nth-child(2),
+#slide9:checked~#controls label:nth-child(3),
+#slide10:checked~#controls label:nth-child(4),
+#slide11:checked~#controls label:nth-child(1),
+#slide4:checked~#controls label:nth-child(2),
+#slide5:checked~#controls label:nth-child(3),
+#slide6:checked~#controls label:nth-child(4),
+#slide7:checked~#controls label:nth-child(1) {
     background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
-    float:right; /* η θεση του δεικτη*/
+    float: right;
+    /* η θεση του δεικτη*/
     margin: 0 -50px 0 0;
     display: block;
- }
+}
 
- #slide1:checked ~ #controls label:nth-last-child(1),
- #slide2:checked ~ #controls label:nth-last-child(3),
- #slide3:checked ~ #controls label:nth-last-child(2),
-
- #slide8:checked ~ #controls label:nth-last-child(1),
- #slide9:checked ~ #controls label:nth-last-child(4),
- #slide10:checked ~ #controls label:nth-last-child(3),
- #slide11:checked ~ #controls label:nth-last-child(2),
- 
- #slide4:checked ~ #controls label:nth-last-child(1),
- #slide5:checked ~ #controls label:nth-last-child(4),
- #slide6:checked ~ #controls label:nth-last-child(3), 
- #slide7:checked ~ #controls label:nth-last-child(2){
+#slide1:checked~#controls label:nth-last-child(1),
+#slide2:checked~#controls label:nth-last-child(3),
+#slide3:checked~#controls label:nth-last-child(2),
+#slide8:checked~#controls label:nth-last-child(1),
+#slide9:checked~#controls label:nth-last-child(4),
+#slide10:checked~#controls label:nth-last-child(3),
+#slide11:checked~#controls label:nth-last-child(2),
+#slide4:checked~#controls label:nth-last-child(1),
+#slide5:checked~#controls label:nth-last-child(4),
+#slide6:checked~#controls label:nth-last-child(3),
+#slide7:checked~#controls label:nth-last-child(2) {
     background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
-    float:left;
+    float: left;
     margin: 0 0 0 -50px;
     display: block;
- }
+}
+
+
 /* με αυτο εδω τον τροπο βρισκω το επιλεγμενο και του λεω σε ποια εικονα θελω να παει μετα, αναλογα το βελακι πο πατας */
+
 
 /* slider  https://codepen.io/anna_blok/pen/eYYRbQY */
 
-.row{
+.row {
     margin-top: -0.4%;
     height: 90em;
     background-color: #F4F4F4;
     width: auto;
 }
 
-h1.title{
+h1.title {
     font-size: 2em;
     margin-left: 12%;
     margin-bottom: -0.1%;
     color: #FD150F;
 }
 
-span.dachi, span.zuki, span.geri{
+span.dachi,
+span.zuki,
+span.geri {
     display: flex;
     margin-left: 10%;
 }
 
-span.first_row, span.sec_row, span.third_row{
+span.first_row,
+span.sec_row,
+span.third_row {
     display: block;
-    margin:0 5% 5% 13%;
+    margin: 0 5% 5% 13%;
 }
 
-#slider{
-   margin-left: 10%;
+#slider {
+    margin-left: 10%;
 }
 
-span.sec_row{
+span.sec_row {
     margin-top: -4.2%;
 }
 
-span.third_row{
-   margin-top: 2%;
+span.third_row {
+    margin-top: 2%;
 }
+
 
 /* to 2o slider */
-.zuki #slider{ 
-   margin-top: -3%;
-} 
 
-p{
+.zuki #slider {
+    margin-top: -3%;
+}
+
+p {
     font-size: 1.2em;
     margin-left: 2%;
-    font-family: system-ui, sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
+    font-family: system-ui, sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
 }
 
-
-
-.darkmode--activated h1{
-   color: rgb(15, 206, 240);
+.darkmode--activated h1 {
+    color: rgb(15, 206, 240);
 }
 
-
-@media screen and (min-width:2000px){
+@media screen and (min-width:2000px) {
     /* 2k monitor */
-    span.sec_row{
-      padding-top: 2%;
-  }
-
-  span.first_row{
-   margin-top: 1%;
-   padding-top: 1%;
-   }
-   span.third_row{
-      padding-top: 0.4%;
-   }
-
+    span.sec_row {
+        padding-top: 2%;
+    }
+    span.first_row {
+        margin-top: 1%;
+        padding-top: 1%;
+    }
+    span.third_row {
+        padding-top: 0.4%;
+    }
 }
 
-
-@media screen and (min-width:4000px){
-
-  
-
+@media screen and (min-width:4000px) {
     /* 4k monitor */
-    span.sec_row{
-      margin-top: -3%;
-  }
-
+    span.sec_row {
+        margin-top: -3%;
+    }
 }
 
-@media screen and (min-width:0px) and (max-width:925px){
-
-    [class*="col-"]{
+@media screen and (min-width:0px) and (max-width:925px) {
+    [class*="col-"] {
         /* kinita */
         width: 100%;
     }
-
-    img.logo{
+    img.logo {
         max-width: 40%;
         max-height: 40%;
     }
-
-
-    hr{
+    hr {
         width: 100%;
     }
-
-    a.pages{
+    a.pages {
         font-size: 1.5em;
-        padding-left:5%;
+        padding-left: 5%;
     }
-
-    .row{
-       height: 175em;
+    .row {
+        height: 175em;
     }
-
-    
-   #slide1:checked ~ #controls label:nth-child(2),
-   #slide2:checked ~ #controls label:nth-child(3),
-   #slide3:checked ~ #controls label:nth-child(1),
-
-   #slide8:checked ~ #controls label:nth-child(2),
-   #slide9:checked ~ #controls label:nth-child(3),
-   #slide10:checked ~ #controls label:nth-child(4),
-   #slide11:checked ~ #controls label:nth-child(1),
-
-   #slide4:checked ~ #controls label:nth-child(2),
-   #slide5:checked ~ #controls label:nth-child(3),
-   #slide6:checked ~ #controls label:nth-child(4),
-   #slide7:checked ~ #controls label:nth-child(1),
-
-   #slide1:checked ~ #controls label:nth-last-child(1),
-   #slide2:checked ~ #controls label:nth-last-child(3),
-   #slide3:checked ~ #controls label:nth-last-child(2),
-
-   #slide8:checked ~ #controls label:nth-last-child(1),
-   #slide9:checked ~ #controls label:nth-last-child(4),
-   #slide10:checked ~ #controls label:nth-last-child(3),
-   #slide11:checked ~ #controls label:nth-last-child(2),
-   
-   #slide4:checked ~ #controls label:nth-last-child(1),
-   #slide5:checked ~ #controls label:nth-last-child(4),
-   #slide6:checked ~ #controls label:nth-last-child(3), 
-   #slide7:checked ~ #controls label:nth-last-child(2){
-      margin: -5% -18% 0 -18%;
+    #slide1:checked~#controls label:nth-child(2),
+    #slide2:checked~#controls label:nth-child(3),
+    #slide3:checked~#controls label:nth-child(1),
+    #slide8:checked~#controls label:nth-child(2),
+    #slide9:checked~#controls label:nth-child(3),
+    #slide10:checked~#controls label:nth-child(4),
+    #slide11:checked~#controls label:nth-child(1),
+    #slide4:checked~#controls label:nth-child(2),
+    #slide5:checked~#controls label:nth-child(3),
+    #slide6:checked~#controls label:nth-child(4),
+    #slide7:checked~#controls label:nth-child(1),
+    #slide1:checked~#controls label:nth-last-child(1),
+    #slide2:checked~#controls label:nth-last-child(3),
+    #slide3:checked~#controls label:nth-last-child(2),
+    #slide8:checked~#controls label:nth-last-child(1),
+    #slide9:checked~#controls label:nth-last-child(4),
+    #slide10:checked~#controls label:nth-last-child(3),
+    #slide11:checked~#controls label:nth-last-child(2),
+    #slide4:checked~#controls label:nth-last-child(1),
+    #slide5:checked~#controls label:nth-last-child(4),
+    #slide6:checked~#controls label:nth-last-child(3),
+    #slide7:checked~#controls label:nth-last-child(2) {
+        margin: -5% -18% 0 -18%;
     }
-
     #slides {
-       max-width: 350px;
-       margin: 0 0%;
-      
+        max-width: 350px;
+        margin: 0 0%;
     }
-
     #slider {
-       margin-right: auto;
-         margin-left: 0%;
+        margin-right: auto;
+        margin-left: 0%;
         width: 85%;
     }
-    
-    .geri #slider .slide_1{
-       justify-content: left;
+    .geri #slider .slide_1 {
+        justify-content: left;
     }
-
-    span.dachi, span.zuki,span.geri{
+    span.dachi,
+    span.zuki,
+    span.geri {
         display: block;
     }
-
-    span.sec_row,span.third_row{
+    span.sec_row,
+    span.third_row {
         margin-top: 40%;
         display: block;
     }
-
-    .geri #slider{
-      margin-top: 5%;
+    .geri #slider {
+        margin-top: 5%;
     }
-        
-
- .container,p, h1.title{
-    margin-left: -2%;
- }
-
- 
-
+    .container,
+    p,
+    h1.title {
+        margin-left: -2%;
+    }
 }

@@ -188,6 +188,10 @@ input[type='submit']:hover {
     background-color: #FD150F;
 }
 
+.darkmode-toggle {
+    z-index: 2;
+}
+
 .form_container {
     margin-top: 5%;
 }

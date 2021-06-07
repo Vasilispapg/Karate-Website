@@ -12,7 +12,7 @@
     <div class="container">
         <div class="header">
             <div id="logo">
-                <a href="index.html"><img class="logo" src="media\logo.png"></a>
+                <a href="index.php"><img class="logo" src="media\logo.png"></a>
             </div>
             <hr>
             <nav id="pages">
@@ -38,8 +38,8 @@
                             <input type="password" placeholder="Password" name="psw" required>
                         </span>
                     <span class="mail_phone">
-                            <input type="text" placeholder="Phone number" id ='phone' name="phone" required>
-                            <input type="text" placeholder="Email" onkeyup="changeEmail();" name="email" id='email' required>  
+                            <input type="tel" placeholder="Phone number" id ='phone' name="phone" required>
+                            <input type="email" placeholder="Email" onkeyup="changeEmail();" name="email" id='email' required>  
                         </span>
                     <span class='birthday'>
                             <div class="birth_text">
@@ -60,7 +60,7 @@
 
                     <div class='image'>
                         Photo:
-                        <input type='file' name='image' class='file' id='file'>
+                        <input type='file' name='image' class='file' id='file' required>
                         <label for='file' onclick='uploadFile();' id='label_name'>Choose a file...</label>
                     </div>
                     <p id='nameFile'></p>

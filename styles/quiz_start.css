@@ -145,6 +145,10 @@ body {
     border-radius: 15px 15px 0 0;
 }
 
+.darkmode-toggle {
+    z-index: 2;
+}
+
 .footer {
     padding: 10px 0 0;
     text-align: right;
