@@ -1,31 +1,45 @@
 <?php
-
+    session_name('temp_user');
     session_start();
+    //mpainw se ayto to session
+
+    $con = mysqli_connect('localhost', 'root', '') or  die("Connection failed: " . mysqli_connect_error());
+    mysqli_select_db($con,"karate");
+    $username=$_SESSION['username'];
+//pairnw tis time se periptwsi poy yparxei
+
+    if(!isset($_SESSION['temp'])){
+        session_unset();
+        session_destroy();
+        session_name('user');
+        session_start();
+        //an dn yparxei to temp ara dn yparxei to session to diagrafw ayto poy eftiaja panw kai mpainw sto user poy stin oysia einai to profile
+    }
+    else{
+        //alliws allazw to role toy alloy
+        $role= $_POST['role'];
+        $sql="UPDATE users SET role=$role WHERE username='".$username."'";
+        mysqli_query($con,$sql);
+    }
+    //vale na allazei kai to role
 
     $phone=$_POST['tel'];
     $email=$_POST['email'];
     $bdate=$_POST['bdate'];
     $sex=$_POST['sex'];
     $psw = $_POST['psw'];
-    $username=$_SESSION['username'];
+    
+
 
     $img=$_FILES['image']['name'];
     $target = "images/".basename($img);
-
-    $con = mysqli_connect('localhost', 'root', '');
-
-    if(!$con){
-        die("Connection failed: " . mysqli_connect_error());
-    }
-    else{
-        mysqli_select_db($con,"karate");
 
         if ($_FILES["image"]["size"] > 50000000) {
           echo "Sorry, your file is too large.";
       }
 
         if(!empty($img)){
-          $sql="UPDATE users SET image='".$img."' ";
+          $sql="UPDATE users SET image='".$img."' WHERE username='".$username."'";
           if (mysqli_query($con, $sql))
             $_SESSION['image']=$img;
         }//image
@@ -57,7 +71,10 @@
         }
     
         mysqli_close($con);
-        header('location:profile.php');
-    }
+
+        if(isset($_SESSION['temp']))
+            header('location:..\users.php');
+        else
+            header('location:..\profile.php');
     
 ?>

@@ -133,7 +133,7 @@ div.profile {
     border-radius: 30px;
     margin: 0 auto;
     padding: 3%;
-    /* overflow: hidden; */
+    overflow: hidden;
 }
 
 span.info {
@@ -237,7 +237,7 @@ input.file {
     border: 0;
     clip: rect(0, 0, 0, 0);
     height: 1px;
-    /* overflow: hidden; */
+    overflow: hidden;
     padding: 0;
     position: relative;
     width: 1px;
@@ -334,8 +334,7 @@ p.error {
 
 @media screen and (min-width:2000px) {
     span.info {
-        margin: -30% 50% 0;
-        padding: 5%;
+        margin: -40% 60% 0;
         font-size: 1.4em;
     }
     div.profile {

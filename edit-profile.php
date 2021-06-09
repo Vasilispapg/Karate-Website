@@ -1,4 +1,5 @@
 <?php
+session_name('user');
 session_start(); ?>
 <!DOCTYPE html>
 <html>
@@ -30,19 +31,19 @@ session_start(); ?>
                 <a class="pages" href="quiz_start.php">Quiz</a>
                 <?php
                 if (!isset($_SESSION['username'])) {
-                    echo "<a class=\"pages\" href=\"login.html\">Login</a>";
+                    echo "<a class=\"pages\" href=\"login.php\">Login</a>";
                     echo "<a class=\"pages\" href=\"sign-up.html\">Sign Up</a>";
                 }
                 ?>
-                <?php if (isset($_SESSION['username'])) {
+                <?php if (isset($_SESSION['username'])) { 
                     echo "<a class=\"pages\"href=\"profile.php\">Profile</a>";
-                    echo "<a class=\"pages\" href=\"logout.php\">Logout</a>";
+                    echo "<a class=\"pages\" href=\"php/logout.php\">Logout</a>";
                     if($_SESSION['role']==2){
-                        echo "<a class=\"pages\" href=\"logout.php\">Edit</a>";
+                        echo "<a class=\"pages\" href=\"edit-quests.php\">Edit</a>";
                     }
                     else if($_SESSION['role']==3){
-                        echo "<a class=\"pages\" href=\"logout.php\">Users</a>";
-                        echo "<a class=\"pages\" href=\"logout.php\">Edit</a>";
+                        echo "<a class=\"pages\" href=\"users.php\">Users</a>";
+                        echo "<a class=\"pages\" href=\"edit-quests.php\">Edit</a>";
                     }
                 }
                 ?>
@@ -58,7 +59,7 @@ session_start(); ?>
                
                 <span class="col-6 info">
                 <?php 
-                    echo "<form action='edit_profile_work.php' method='post' enctype=\"multipart/form-data\" >";
+                    echo "<form action='php/edit_info_user.php' method='post' enctype=\"multipart/form-data\" >";
                     
                     echo "<div class='col-4 profile_picture_edit'> <img src='images/"; echo $_SESSION['image'];echo "' alt='profile' class='col-6 profiles' id='profile' name='profile'> ";  
                        
@@ -71,11 +72,23 @@ session_start(); ?>
                     echo " <input type='text' class='infos' id='bdate' name='bdate' placeholder='Bdate:' value='"; echo $_SESSION['bdate'];echo "'</input>";
                      echo " <input type='email' class='infos' id='email' onkeyup=\"changeEmail();\" name='email' placeholder='Email:' value='"; echo $_SESSION['email'];echo "'</input>";
                      echo " <input type='tel' class='infos' id='tel' pattern=\"69[0-9]{8}\" name='tel' placeholder='Phone:' value='"; echo $_SESSION['phone'];echo "'</input>";
-                      echo  "<input type=\"radio\" class='infos' name=\"sex\" value=\"F\" checked><label>Γυναίκα</label>
+                     //GIA NA YPARXOYN DEFAULT OI TIMES NA MIN ALLAZEI KATALATHOS  
+                     if($_SESSION['sex']=='F'){
+                        echo "<input type=\"radio\" class='infos' name=\"sex\" value=\"F\" checked><label>Γυναίκα</label>
                         <input type=\"radio\" class='infos' name=\"sex\" value=\"M\"><label>Άντρας</label>
-                        <input type=\"radio\" class='infos' name=\"sex\" value=\"E\"><label>Κάτι άλλο</label>"
-                        ;
-                      echo "<input type='submit' class='infos'> </form>"  ?>
+                        <input type=\"radio\" class='infos' name=\"sex\" value=\"E\"><label>Κάτι άλλο</label><br>";
+                      }
+                      else if($_SESSION['sex']=='M'){
+                        echo "<input type=\"radio\" class='infos' name=\"sex\" value=\"F\"><label>Γυναίκα</label>
+                        <input type=\"radio\" class='infos' name=\"sex\" value=\"M\"checked ><label>Άντρας</label>
+                        <input type=\"radio\" class='infos' name=\"sex\" value=\"E\"><label>Κάτι άλλο</label><br>";
+                      }
+                      else{
+                        echo "<input type=\"radio\" class='infos' name=\"sex\" value=\"F\"><label>Γυναίκα</label>
+                        <input type=\"radio\" class='infos' name=\"sex\" value=\"M\"><label>Άντρας</label>
+                        <input type=\"radio\" class='infos' name=\"sex\" value=\"E\"checked ><label>Κάτι άλλο</label><br>";
+                      }
+                      echo "<input type='submit' class='infos'> </form>";  ?>
                 </span>
                 <div class='col-12 edits'>
                 <a href="profile.php">

@@ -27,7 +27,7 @@ function checkName(str) { //elegxei an yparxei to onoma se database
             checker();
         }
     }
-    xmlhttp.open("GET", "check-name.php?user=" + str, true);
+    xmlhttp.open("GET", "php/check-name.php?user=" + str, true);
     xmlhttp.send();
 }
 
@@ -55,7 +55,7 @@ function checkEmail(str) { //elegxei an yparxei to email se database
         }
     }
 
-    xmlhttp.open("GET", "check-email.php?email=" + str, true);
+    xmlhttp.open("GET", "php/check-email.php?email=" + str, true);
     xmlhttp.send();
 
 }

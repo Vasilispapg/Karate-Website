@@ -10,7 +10,7 @@
     $sex=$_POST['sex'];
 
     $img=$_FILES['image']['name'];
-    $target = "images/".basename($img);
+    $target = "../images/".basename($img);
 
     $con = mysqli_connect("localhost","root","");
 
@@ -38,7 +38,7 @@
             }
 
             mysqli_close($con);
-            // include 'usrlogin.php'; //ektelei me tin mia to login
+            include 'usrlogin.php'; //ektelei me tin mia to login
         }  
     }
 

@@ -1,3 +1,8 @@
+<?php
+session_name('user');
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -19,7 +24,7 @@
                 <a class="pages" href="basics.php">Basics</a>
                 <a class="pages" href="more.php">More</a>
                 <a class="pages" href="quiz_start.php">Quiz</a>
-                <a class="pages" href="login.html">Login</a>
+                <a class="pages" href="login.php">Login</a>
                 <a class="pages" href="sign-up.html">Sign Up</a>
             </nav>
         </div>
@@ -27,7 +32,7 @@
             <img src='media/background.jpg' style="isolation:isolate;">
         </div>
         <div class="row col-12">
-            <form class="form col-4" action="usrlogin.php" method="post">
+            <form class="form col-4" action="php\usrlogin.php" method="post">
                 <div class="container_welcome col-8">
                     <p class="welcome_text">Welcome back!</p>
                     <p class="login_text">Login your account</p>
@@ -48,11 +53,14 @@
                     </span>
                 </div>
             </form>
+            <?php 
+                    if(isset($_SESSION['error']) && $_SESSION['error']==1)
+                        echo"<p style='margin-top:-2%; color:red;'>Something wrong happen</p>";
+                    ?>
         </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script src='scripts/darkmode.js'></script>
-<script src='scripts/login.js'></script>
 
 </html>

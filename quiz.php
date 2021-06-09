@@ -1,4 +1,5 @@
 <?php
+session_name('user');
 session_start();?>
     <!DOCTYPE html>
     <html>
@@ -30,19 +31,19 @@ session_start();?>
                 <a class="pages" href="quiz_start.php">Quiz</a>
                 <?php
                 if (!isset($_SESSION['username'])) {
-                    echo "<a class=\"pages\" href=\"login.html\">Login</a>";
+                    echo "<a class=\"pages\" href=\"login.php\">Login</a>";
                     echo "<a class=\"pages\" href=\"sign-up.html\">Sign Up</a>";
                 }
                 ?>
                 <?php if (isset($_SESSION['username'])) {
                     echo "<a class=\"pages\"href=\"profile.php\">Profile</a>";
-                    echo "<a class=\"pages\" href=\"logout.php\">Logout</a>";
+                    echo "<a class=\"pages\" href=\"php/logout.php\">Logout</a>";
                     if($_SESSION['role']==2){
-                        echo "<a class=\"pages\" href=\"logout.php\">Edit</a>";
+                        echo "<a class=\"pages\" href=\"edit-quests.php\">Edit</a>";
                     }
                     else if($_SESSION['role']==3){
-                        echo "<a class=\"pages\" href=\"logout.php\">Users</a>";
-                        echo "<a class=\"pages\" href=\"logout.php\">Edit</a>";
+                        echo "<a class=\"pages\" href=\"users.php\">Users</a>";
+                        echo "<a class=\"pages\" href=\"edit-quests.php\">Edit</a>";
                     }
                 }
                 ?>

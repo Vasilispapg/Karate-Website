@@ -6,18 +6,18 @@ session_start();?>
 
     <head>
         <title>JKA Karate</title>
-        <link rel="stylesheet" href="styles/quiz_start.css">
+        <link rel="stylesheet" href="styles/edit-quests.css">
         <meta charset="UTF8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-        <body>
-            <div class="container">
-                <div class="header">
-                    <div id="logo">
-                        <a href="index.php"><img class="logo" src="media\logo.png"></a>
-                    </div>
-                    <?php
+    <body>
+        <div class="container">
+            <div class="header">
+                <div id="logo">
+                    <a href="index.php"><img class="logo" src="media\logo.png"></a>
+                </div>
+                <?php
             if(isset($_SESSION['role'])&&$_SESSION['role']==3){
                echo" <hr style=\"width:75%;\" >";
             }
@@ -48,25 +48,13 @@ session_start();?>
                 }
                 ?>
             </nav>
-                </div>
-
-                <div class="row">
-                    <div class='background'>
-                        <img src='media/background.jpg'>
-                    </div>
-                    <div class="qa_box col-4">
-                        <div class="qa_header">
-                            <span>Score: <span class='score'>0</span></span>
-                            <span class="timer">Timer: 10 sec</span>
-                        </div>
-                        <div class="footer">
-                            <a href='quiz.php' class='start'>Start</a>
-                        </div>
-                    </div>
-                </div>
             </div>
-        </body>
-        <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
-        <script src='scripts/darkmode.js'></script>
+
+        <div class="row">
+                
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script src='scripts/darkmode.js'></script>
 
     </html>
