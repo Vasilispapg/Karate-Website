@@ -11,7 +11,8 @@
 
     $img=$_FILES['image']['name'];
     $target = "../images/".basename($img);
-
+    //an yparxei to arxeio logika tha antikatastathei an mpei ena me to idio onoma
+    
     $con = mysqli_connect("localhost","root","");
 
     if(!$con){

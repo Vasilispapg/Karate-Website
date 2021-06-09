@@ -32,7 +32,7 @@
 
 
     $img=$_FILES['image']['name'];
-    $target = "images/".basename($img);
+    $target = "../images/".basename($img);
 
         if ($_FILES["image"]["size"] > 50000000) {
           echo "Sorry, your file is too large.";
