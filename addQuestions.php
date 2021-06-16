@@ -54,26 +54,6 @@ session_start();?>
                     <div class='background'>
                         <img src='media/background.jpg'>
                     </div>
-                    <div class="qa_box col-4">
-                        <div class="qa_header">
-                            <span>Score: <span class='score'>0</span></span>
-                            <span class="timer">Timer: 10 sec</span>
-                        </div>
-                        <div class="footer">
-                            <a href='quiz.php' class='start'>Start</a>
-                        </div>
-                        
-                    </div>
-                    
-                    <div class="qa_level">
-                        <a class="lvl_button">Eas2y</a>
-                        <a class="lvl_button">Medium</a>
-                        <a class="lvl_button">Hard</a>
-                    </div>
-                    <div class="qa_newq">
-                        <a href="addQuestions.php" class="qu_button">Add questions</a>
-                    </div>
-               
                 </div>
             </div>
         </body>

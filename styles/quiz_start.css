@@ -144,7 +144,45 @@ body {
     padding: 15px 20px;
     border-radius: 15px 15px 0 0;
 }
-
+.qa_level{
+    color: white;   
+    justify-content: space-between;
+    margin: -9px 0px 15px;
+    padding: 5px 5px;
+    border-radius: 4px 4px 0 0;
+}
+.lvl_button{
+    background-color: #b19b75; 
+    border: none;
+    color: white;
+    padding: 15px 58px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 1px;
+    cursor: pointer;
+  }
+.qa_newq{
+    color: white;   
+    justify-content: space-between;
+    margin: -35px 0px 15px;
+    padding: 5px 5px;
+    border-radius: 10px 10px 0 0;
+}
+.qu_button{
+    background-color: #b19b75; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 58px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 1px;
+    width: 46.8%;
+    cursor: pointer;
+}
 .darkmode-toggle {
     z-index: 2;
 }
@@ -156,6 +194,8 @@ body {
     right: 3%;
     text-align: center;
 }
+
+
 
 .start {
     display: inline-block;
