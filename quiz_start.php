@@ -1,6 +1,7 @@
 <?php
 session_name('user');
-session_start();?>
+session_start();
+$_SESSION['diff']="1";?>
     <!DOCTYPE html>
     <html>
 
@@ -57,18 +58,17 @@ session_start();?>
                     <div class="qa_box col-4">
                         <div class="qa_header">
                             <span>Score: <span class='score'>0</span></span>
-                            <span class="timer">Timer: 10 sec</span>
+                            <span class="timer">Timer: 20 sec</span>
                         </div>
                         <div class="footer">
-                            <a href='quiz.php' class='start'>Start</a>
+                            <a href='quiz.php' id='start' class='start'>Start</a>
                         </div>
                         
-                    </div>
-                    
+                    </div>  
                     <div class="qa_level">
-                        <a class="lvl_button">Easy</a>
-                        <a class="lvl_button">Medium</a>
-                        <a class="lvl_button">Hard</a>
+                        <a id='easy' style="background-color:green;" class="lvl_button">Easy</a>
+                        <a id='med' class="lvl_button">Medium</a>
+                        <a id='hard' class="lvl_button">Hard</a>
                     </div>
                     <div class="qa_newq">
                         <a href="addQuestions.php" class="qu_button">Add questions</a>
@@ -79,5 +79,6 @@ session_start();?>
         </body>
         <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
         <script src='scripts/darkmode.js'></script>
+        <script src='scripts/buttonsSelect.js'></script>
 
     </html>

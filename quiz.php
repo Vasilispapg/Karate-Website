@@ -12,6 +12,7 @@ session_start();?>
     </head>
 
     <body onload='seeTheQuestions()'>
+    <?php echo $_SESSION['diff'];?>
         <div class="container">
             <div class="header">
                 <div id="logo">
@@ -57,126 +58,9 @@ session_start();?>
                 <div class="qa_box col-4" id='qa_box'>
                     <div class="qa_header">
                         <span>Score: <span class='score' id='score'>0</span></span>
-                        <span class="timer" id='timer'>10</span>
+                        <span class="timer" id='timer'>20</span>
                     </div>
-                    <div class='qa_body'>
-                        <div class='qa_quest active'>
-                            <h4>1.Το Oi-Zuki ειναι:</h4>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q1' valid='valid'>
-                                <span>Επίθεση με το ίδιο πόδι χέρι</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q1'>
-                                <span>Γυριστή Κλωτσιά</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q1'>
-                                <span>Επίθεση με ανάποδο πόδι χέρι</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q1'>
-                                <span>Τίποτα από τα παραπάνω</span>
-                            </div>
-                        </div>
-                        <div class='qa_quest'>
-                            <h4>2.Το Καράτε αναπτύχθηκε:</h4>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q2'>
-                                <span>Στο Τόκυο</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q2'>
-                                <span>Στην Σπάρτη</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q2' valid='valid'>
-                                <span>Στην Οκινάουα</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q2'>
-                                <span>Στο Κιότο</span>
-                            </div>
-                        </div>
-                        <div class='qa_quest'>
-                            <h4>3.Το Te απο το (kara-te) σημαίνει</h4>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q3'>
-                                <span>Πόδι</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q3' valid='valid'>
-                                <span>Χέρι</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q3'>
-                                <span>Όπλο</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q3'>
-                                <span>Ισορροπία</span>
-                            </div>
-                        </div>
-                        <div class='qa_quest'>
-                            <h4>4.Το Mawashi-Geri είναι</h4>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q4'>
-                                <span>Κλωτσιά στο κεφάλι</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q4'>
-                                <span>Κλωτσιά στον αέρα</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q4' valid='valid'>
-                                <span>Πλάγια κλωτσιά</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q4'>
-                                <span>Κλωτσιά για άμυνα</span>
-                            </div>
-                        </div>
-                        <div class='qa_quest'>
-                            <h4>5.Το σύμβολο του Karate είναι:</h4>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q5'>
-                                <span>Ένας δράκος</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q5' valid='valid'>
-                                <span>Μία τίγρης</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q5'>
-                                <span>Η σημαία της Ιαπωνίας</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q5'>
-                                <span>Ένας στρουθοκάμηλος</span>
-                            </div>
-                        </div>
-                        <div class='qa_quest'>
-                            <h4>6.Η Zengutsu-Dachi χρησιμοποιείται για:</h4>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q6' valid='valid'>
-                                <span>Ισορροπία &amp; εκγύμναση</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q6'>
-                                <span>Να τρομάζουμε τον αντίπαλο</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q6'>
-                                <span>Γιατί έτσι μας αρέσει</span>
-                            </div>
-                            <div class='qa_answer'>
-                                <input type='radio' name='q6'>
-                                <span>Τίποτα από τα παραπάνω</span>
-                            </div>
-                        </div>
-                        <div class='qa_quest'>
-                            <h4>Your total score <span id='totalscore'>0</span> out of 100</h4>
-                        </div>
+                    <div class='qa_body' id='qa_body'>
                     </div>
                     <div class="footer">
                         <span class='skip' id='skip'>Skip</span>
@@ -186,6 +70,8 @@ session_start();?>
         </div>
     </body>
     <script src="scripts/quiz.js"></script>
+    <script src="scripts/questions.js"></script>
+    <script src="scripts/buttonsSelect.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src='scripts/darkmode.js'></script>
 

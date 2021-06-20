@@ -54,6 +54,9 @@ session_start();?>
                     <div class='background'>
                         <img src='media/background.jpg'>
                     </div>
+                    <form>
+                        <input type='text'>
+                    </form>
                 </div>
             </div>
         </body>
