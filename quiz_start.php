@@ -66,7 +66,7 @@ session_start();?>
                     </div>
                     
                     <div class="qa_level">
-                        <a class="lvl_button">Eas2y</a>
+                        <a class="lvl_button">Easy</a>
                         <a class="lvl_button">Medium</a>
                         <a class="lvl_button">Hard</a>
                     </div>
