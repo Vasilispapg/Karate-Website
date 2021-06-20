@@ -117,11 +117,11 @@ hr {
     background-color: #F4F4F4;
     font-size: 1em;
     text-align: left;
+    padding: 1% 0%;
 }
 
 article.basics {
-    /* padding:0.2% */
-    margin: 0 5%;
+    margin: 0% 5%;
     /*ta kentrarei ola*/
 }
 

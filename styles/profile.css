@@ -334,7 +334,7 @@ p.error {
 
 @media screen and (min-width:2000px) {
     span.info {
-        margin: -40% 60% 0;
+        margin: -35% 60% 0;
         font-size: 1.4em;
     }
     div.profile {

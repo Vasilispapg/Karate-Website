@@ -1,5 +1,4 @@
 <?php
-session_start();
 
 $user=$_POST['uname'];
 $pass=$_POST['psw'];
