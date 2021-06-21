@@ -44,8 +44,7 @@ function init() {
         for (var i = 0; i < qa_quest.length; i++) {
             qa_quest[i].className = 'qa_quest';
         }
-        console.log(qa_quest[count]);
-        console.log(qa_quest);
+
         qa_quest[count].className = 'qa_quest active';
         if (count == qa_quest.length - 1) {
             skip.style.display = 'none';

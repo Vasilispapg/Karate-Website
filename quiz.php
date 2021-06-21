@@ -12,7 +12,6 @@ session_start();?>
     </head>
 
     <body onload='seeTheQuestions()'>
-    <?php echo $_SESSION['diff'];?>
         <div class="container">
             <div class="header">
                 <div id="logo">

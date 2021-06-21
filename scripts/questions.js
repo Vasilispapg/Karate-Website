@@ -7,13 +7,19 @@ function seeTheQuestions() {
 
             var questions = result.split('#'); //me ayto pernoyme tis erwtisis
             questions = questions.filter(Boolean);
+
+            //vres to size twn erwtisewn
+            //an einai panw apo 5 pare tyxaia alliws petates oles random
+            shuffle(questions);
+
             id = 0;
             questions.forEach(element => {
                 id++;
                 var apantisis = element.split('^'); //me ayto pairnoyme ta kommatia jexwrista
-                console.log(apantisis);
-                var quest = createNewQuestion(apantisis, id);
-                document.getElementById('qa_body').appendChild(quest);
+                if (id <= 6) {
+                    var quest = createNewQuestion(apantisis, id);
+                    document.getElementById('qa_body').appendChild(quest);
+                }
             });
             //vale kai to output total score
             document.getElementById('qa_body').appendChild(totalScore());
@@ -23,7 +29,6 @@ function seeTheQuestions() {
     }
     xmlhttp.open("GET", "php/fetch_all_questions.php?diff=" + localStorage.getItem("Level"), true);
     xmlhttp.send();
-
 }
 
 function createNewQuestion(q, id) {
@@ -48,6 +53,26 @@ function createNewQuestion(q, id) {
     div_quest.appendChild(ans4);
 
     return div_quest;
+}
+
+function shuffle(array) {
+    var currentIndex = array.length,
+        randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        // And swap it with the current element.
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]
+        ];
+    }
+
+    return array;
 }
 
 function createAnswers(q, id, count) {
