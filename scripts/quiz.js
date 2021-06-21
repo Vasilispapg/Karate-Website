@@ -59,7 +59,7 @@ function init() {
                     // document.getElementById('totalscore').innerHTML = xmlhttp.responseText
                 }
             }
-            xmlhttp.open("POST", "php/send_score.php?diff=" + "1" + "&score=" + scoreCount + "&date=" + today, true);
+            xmlhttp.open("POST", "php/send_score.php?diff=" + localStorage.getItem('Level') + "&score=" + scoreCount + "&date=" + today, true);
             xmlhttp.send();
 
         }
