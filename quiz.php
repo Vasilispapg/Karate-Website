@@ -71,8 +71,6 @@ session_start();?>
     </body>
     <script src="scripts/quiz.js"></script>
     <script src="scripts/questions.js"></script>
-    <script src="scripts/buttonsSelect.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src='scripts/darkmode.js'></script>
-
     </html>

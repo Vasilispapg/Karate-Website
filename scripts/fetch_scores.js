@@ -18,9 +18,7 @@ function fetchScores() {
                 wra = wra.split(":");
                 wra = wra[0] + ":" + wra[1]; //gia na diwjw ta deyterolepta
 
-                date = date[2] + " " + date[1] + " " + date[3]; //25 Jun 2019;
-
-                console.log(answers);
+                date = date[2] + " " + date[1] + " " + date[3]; //25 Jun 2019
 
                 document.getElementById('score' + id).innerHTML = answers[1] + "/100";
                 document.getElementById('date' + id).innerHTML = date;

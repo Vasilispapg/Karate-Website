@@ -1,4 +1,5 @@
 function seeTheQuestions() {
+
     xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -18,8 +19,9 @@ function seeTheQuestions() {
             document.getElementById('qa_body').appendChild(totalScore());
         }
         init(); //quiz gia na proxwraei
+        // console.log(localStorage.getItem("Level")); //soy dinei to epipedo poy dialejes prin to exw sto localstorage
     }
-    xmlhttp.open("GET", "php/fetch_all_questions.php?", true);
+    xmlhttp.open("GET", "php/fetch_all_questions.php?diff=" + localStorage.getItem("Level"), true);
     xmlhttp.send();
 
 }
