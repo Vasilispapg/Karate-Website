@@ -71,7 +71,10 @@ $_SESSION['diff']="1";?>
                         <a id='hard' class="lvl_button">Hard</a>
                     </div>
                     <div class="qa_newq">
-                        <a href="addQuestions.php" class="qu_button">Add questions</a>
+                    <?php if(isset($_SESSION['username']))
+                        echo "<a href=\"addQuestions.php\" class=\"qu_button\">Add questions</a>";
+                    ?>
+                        
                     </div>
                
                 </div>

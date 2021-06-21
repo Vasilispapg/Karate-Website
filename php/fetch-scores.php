@@ -17,5 +17,4 @@
     }
 
     mysqli_close($con);
-// header('location:../edit-quests.php')
 ?>
