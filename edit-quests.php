@@ -11,7 +11,7 @@ session_start();?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body>
+    <body onload='editTheQuestions()'>
         <div class="container">
             <div class="header">
                 <div id="logo">
@@ -50,11 +50,13 @@ session_start();?>
             </nav>
             </div>
 
-        <div class="row">
-                
+        <div class="row" id='row'>
+        <h2 class='col-12'>Διαχείριση Ερωτησεων</h2>
+            </span>
         </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src='scripts/darkmode.js'></script>
+    <script src='scripts/fetch_quests_toedit.js'></script>
 
     </html>

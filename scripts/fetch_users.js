@@ -55,7 +55,7 @@ function createNewElement(id) {
 
     img_a = document.createElement('a');
     img_a.id = 'edit-link' + id;
-    img_a.href = 'php/fetch_temp_user.php?username=';
+    img_a.href = 'php/fetch_edit_user.php?username=';
     img_a.appendChild(img_icon);
 
     img_div.appendChild(img_a);

@@ -16,7 +16,6 @@ session_start();
         <link rel="stylesheet" href="styles/users.css">
         <meta charset="UTF8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src='scripts/fetch.js'></script>
     </head>
 
     <body onload='seeTheUsers()'>
@@ -44,6 +43,6 @@ session_start();
     </body>
     <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
     <script src='scripts/darkmode.js'></script>
-
+    <script src='scripts/fetch_users.js'></script>
 
     </html>

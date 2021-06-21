@@ -11,7 +11,7 @@ session_start(); ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
  </head>
 
-<body>
+<body onload='fetchScores()'>
     <div class="container">
         <div class="header">
             <div id="logo">
@@ -79,44 +79,14 @@ session_start(); ?>
                 </div> 
         </div>
         <div class='profile_quiz'>
-            <ul class="col-10 responsive-table">
+            <ul class="col-10 responsive-table" id='tableheader'>
                 <li class="table-header">
-                <div class="kati col_1">Date</div>
-                <div class="kati col_2">&nbsp;&nbsp;
+                <div class="insidetable col-1">Date</div>
+                <div class="insidetable col_2">&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;Time</div>
-                <div class="kati col_3">Difficulty</div>
-                <div class="kati col_4">Score</div>
-                </li>
-                <li class="table-row">
-                <div class="kati col_1" data-label="Date: ">26-05-2019</div>
-                <div class="kati col_2" data-label="Time: ">17:23</div>
-                <div class="kati col_3" data-label="Difficulty: ">Medium</div>
-                <div class="kati col_4" data-label="Score: ">90/100</div>
-                </li>
-                <li class="table-row">
-                <div class="kati col_1" data-label="Date: ">26-05-2019</div>
-                <div class="kati col_2" data-label="Time: ">17:23</div>
-                <div class="kati col_3" data-label="Difficulty: ">Medium</div>
-                <div class="kati col_4" data-label="Score: ">90/100</div>
-                </li>
-                <li class="table-row">
-                <div class="kati col_1" data-label="Date: ">26-05-2019</div>
-                <div class="kati col_2" data-label="Time: ">17:23</div>
-                <div class="kati col_3" data-label="Difficulty: ">Medium</div>
-                <div class="kati col_4" data-label="Score: ">90/100</div>
-                </li>
-                <li class="table-row">
-                <div class="kati col_1" data-label="Date: ">26-05-2019</div>
-                <div class="kati col_2" data-label="Time: ">17:23</div>
-                <div class="kati col_3" data-label="Difficulty: ">Medium</div>
-                <div class="kati col_4" data-label="Score: ">90/100</div>
-                </li>
-                <li class="table-row">
-                <div class="kati col_1" data-label="Date: ">26-05-2019</div>
-                <div class="kati col_2" data-label="Time: ">17:23</div>
-                <div class="kati col_3" data-label="Difficulty: ">Medium</div>
-                <div class="kati col_4" data-label="Score: ">90/100</div>
+                <div class="insidetable col_3">Difficulty</div>
+                <div class="insidetable col_4">Score</div>
                 </li>
                 
             </ul>
@@ -127,5 +97,6 @@ session_start(); ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script src='scripts/darkmode.js'></script>
+<script src='scripts/fetch_scores.js'></script>
 
 </html>

@@ -1,0 +1,221 @@
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.66%;
+}
+
+.col-3 {
+    width: 25%;
+}
+
+.col-4 {
+    width: 33.33%;
+}
+
+.col-5 {
+    width: 41.66%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.66%;
+}
+
+.col-9 {
+    width: 75%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.66%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.darkmode--activated a.pages {
+    color: white;
+}
+
+p {
+    font-family: system-ui, sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
+}
+
+.darkmode--activated .qa_header {
+    background-color: black;
+}
+
+.darkmode--activated .background {
+    filter: invert()
+}
+
+img.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    max-width: 10%;
+    max-height: 10%;
+}
+
+a.pages {
+    font-size: 1.2em;
+    padding-left: 5%;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    right: 1.5%;
+}
+
+div.header {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: auto;
+    width: 50%;
+}
+
+hr {
+    position: relative;
+    left: 1.5%;
+    margin-top: 0.5em;
+    border-width: 1px;
+    width: 50%;
+}
+
+
+/* Header */
+
+.background {
+    position: absolute;
+    margin-top: 1%;
+    filter: blur(10px);
+    z-index: -1;
+    height: 83%;
+    width: 99%;
+    overflow: hidden;
+}
+
+.row {
+    margin-top: 5%;
+}
+
+body {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    padding: 4% 2%;
+    color: black;
+    text-align: left;
+    height: 40em;
+    width: 5em;
+    background-color: #fff;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 1);
+}
+
+input[type='submit']:hover {
+    background-color: red;
+}
+
+.inside_form {
+    left: 25%;
+    position: relative;
+}
+
+p {
+    display: grid;
+    font-weight: bold;
+}
+
+.question {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.ans {
+    width: 50%;
+    height: 25px;
+}
+
+.darkmode-toggle {
+    z-index: 2;
+}
+
+.dyskolia {
+    margin: 3% 0;
+    left: 40%;
+    transform: scale(1.5);
+    position: relative;
+}
+
+input[type='submit'] {
+    border: none;
+    outline: none;
+    width: 50%;
+    position: relative;
+    display: block;
+    height: 40px;
+    color: #fff;
+    background-color: #262626;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    /* για να δειχνει το ποντικι οτι μπορει να πατηθει το κουμπι*/
+}
+
+select {
+    position: relative;
+    left: 1%;
+    transform: scale(1.2);
+}
+
+@media screen and (min-width:2000px) {
+    .background {
+        content: "";
+        content: url(../media/background2.jpg);
+        /* left: -10%; */
+        width: 99vw;
+        background-repeat: no-repeat;
+        height: 82vh;
+    }
+}
+
+@media screen and (min-width:0px) and (max-width:925px) {
+    [class*="col-"] {
+        /* kinita */
+        width: 100%;
+    }
+    img.logo {
+        max-width: 40%;
+        max-height: 40%;
+    }
+    hr {
+        width: 100%;
+    }
+    a.pages {
+        font-size: 1.5em;
+        padding-left: 5%;
+    }
+}

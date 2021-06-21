@@ -297,7 +297,7 @@ p.error {
     li.table-row {
         display: block;
     }
-    .kati {
+    .insidetable {
         display: flex;
         padding: 10px 0;
         /* margin: 0 0 0 60%; */
@@ -306,7 +306,7 @@ p.error {
         flex-basis: 50%;
         text-align: right;
     }
-    .kati:before {
+    .insidetable:before {
         content: attr(data-label);
     }
     .infos {

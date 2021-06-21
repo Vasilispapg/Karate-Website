@@ -6,7 +6,7 @@ session_start();?>
 
     <head>
         <title>JKA Karate</title>
-        <link rel="stylesheet" href="styles/quiz_start.css">
+        <link rel="stylesheet" href="styles/addQuestions.css">
         <meta charset="UTF8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
@@ -49,13 +49,39 @@ session_start();?>
                 ?>
             </nav>
                 </div>
-
-                <div class="row">
-                    <div class='background'>
+                <div class='background'>
                         <img src='media/background.jpg'>
                     </div>
-                    <form>
-                        <input type='text'>
+                <div class="row">
+
+                    <form class='col-6' action="php\questions-goes-up.php" id='form' method="post">
+                        <div class='inside_form'>
+                        <div class='question'>
+                            <p>Ερώτηση</p><input class='ans' type='text' name='quest'>
+                        </div>
+                        <div class='apantisis'>
+                        <p>απαντηση 1</p><input class='ans' type='text' name='ans1'>
+                        <p>απαντηση 2</p><input class='ans' type='text' name='ans2'>
+                        <p>απαντηση 3</p><input class='ans' type='text' name='ans3'>
+                        <p>απαντηση 4</p><input class='ans' type='text' name='ans4'>
+                        </div>
+                        <p>Valid Question</p>
+                        <select aria-label="valid" name="valid" class='valid' id="valid" title="valid">
+                            <option class="option" value="1">1</option>
+                            <option class="option" value="1">2</option>
+                            <option class="option" value="1">3</option>
+                            <option class="option" value="1">4</option>
+                        </select>
+                        <div class='dyskolia'>
+                            Easy<input type='radio' name='diff' value='1' checked>
+                            Medium<input type='radio'  value='2' name='diff'>
+                            Hard<input type='radio'  value='3' name='diff'>
+                        </div>
+                        
+                        <input type='submit'>
+
+                        </div>
+
                     </form>
                 </div>
             </div>

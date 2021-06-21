@@ -115,4 +115,40 @@ hr {
     background-color: #F4F4F4;
     font-size: 1em;
     padding-bottom: 5%;
+    text-align: left;
+}
+
+h2 {
+    padding-top: 2%;
+    margin: 2% 45%;
+}
+
+.quest {
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 0.3%;
+    display: flex;
+    flex-direction: row;
+    margin: 1% 35%;
+}
+
+div.name_quest {
+    margin-right: 3%;
+}
+
+img.edit-img {
+    isolation: inherit;
+    width: 2em;
+}
+
+div.edits {
+    padding-left: 1%;
+    margin-top: 2%;
+}
+
+@media screen and (max-width:925px) {
+    .user {
+        display: block;
+        border: 0;
+    }
 }

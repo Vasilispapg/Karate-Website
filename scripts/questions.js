@@ -9,7 +9,7 @@ function seeTheQuestions() {
             id = 0;
             questions.forEach(element => {
                 id++;
-                var apantisis = element.split('&'); //me ayto pairnoyme ta kommatia jexwrista
+                var apantisis = element.split('^'); //me ayto pairnoyme ta kommatia jexwrista
                 console.log(apantisis);
                 var quest = createNewQuestion(apantisis, id);
                 document.getElementById('qa_body').appendChild(quest);
@@ -18,8 +18,6 @@ function seeTheQuestions() {
             document.getElementById('qa_body').appendChild(totalScore());
         }
         init(); //quiz gia na proxwraei
-        x = globalVariable.clicked;
-        console.log(x);
     }
     xmlhttp.open("GET", "php/fetch_all_questions.php?", true);
     xmlhttp.send();
