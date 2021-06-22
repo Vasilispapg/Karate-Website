@@ -39,18 +39,28 @@ function createNewQuestion(q, id) {
         div_quest.className = "qa_quest";
     var header4 = document.createElement("h4");
     header4.innerHTML = q[0] //erwtisi
-
-    //prwti apantisi
-    var ans1 = createAnswers(q, id, 1);
-    var ans2 = createAnswers(q, id, 2);
-    var ans3 = createAnswers(q, id, 3);
-    var ans4 = createAnswers(q, id, 4);
-
     div_quest.appendChild(header4);
-    div_quest.appendChild(ans1);
-    div_quest.appendChild(ans2);
-    div_quest.appendChild(ans3);
-    div_quest.appendChild(ans4);
+    var type = q[7];
+    //prwti apantisi
+    //1 -> pollaplhs, 2->keimeno, 3->swsto/lathos
+    if (q[6] == 1 || q[6] == 3 || g[6] == 2) {
+        var ans1 = createAnswers(q, id, 1); //ola ta eidh theloun thn prwth erwthsh
+        div_quest.appendChild(ans1);
+
+        if (type != 2) {
+            var ans2 = createAnswers(q, id, 2); //mono ta swsto lathos theloun kai thn deuterh apanthsh
+            div_quest.appendChild(ans2);
+        }
+    }
+    if (type == 1) {
+        var ans3 = createAnswers(q, id, 3); //ta pollaplhs theloun oles tis apanthseis
+        var ans4 = createAnswers(q, id, 4);
+        div_quest.appendChild(ans3);
+        div_quest.appendChild(ans4);
+    }
+
+
+
 
     return div_quest;
 }
@@ -82,16 +92,19 @@ function createAnswers(q, id, count) {
     var input_radio = document.createElement("input");
     input_radio.type = 'radio';
     input_radio.name = 'q' + id;
+    if (q[6] == 1 || q[6] == 3) {
+        if (count == q[5]) //einai i swsti apantisi
+            input_radio.setAttribute('valid', "valid");
+        var span = document.createElement("span");
+        span.innerHTML = q[count];
+        div_ans1.appendChild(input_radio);
+        div_ans1.appendChild(span);
+    }
 
-    if (count == q[5]) //einai i swsti apantisi
-        input_radio.setAttribute('valid', "valid");
 
 
-    var span = document.createElement("span");
-    span.innerHTML = q[count];
 
-    div_ans1.appendChild(input_radio);
-    div_ans1.appendChild(span);
+
 
     return div_ans1;
 }

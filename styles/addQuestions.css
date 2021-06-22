@@ -180,6 +180,7 @@ input[type='submit'] {
     height: 40px;
     color: #fff;
     background-color: #262626;
+    margin-top: 3%;
     transition: all 0.3s ease-out;
     cursor: pointer;
     /* για να δειχνει το ποντικι οτι μπορει να πατηθει το κουμπι*/

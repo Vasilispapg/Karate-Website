@@ -11,7 +11,7 @@ session_start();?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-        <body>
+        <body onload="display()">
             <div class="container">
                 <div class="header">
                     <div id="logo">
@@ -55,38 +55,19 @@ session_start();?>
                 <div class="row">
 
                     <form class='col-6' action="php\questions-goes-up.php" id='form' method="post">
-                        <div class='inside_form'>
-                        <div class='question'>
-                            <p>Ερώτηση</p><input class='ans' type='text' name='quest'>
+                        <div class='inside_form' id='inside_form'>
+                        <div class='dyskolia col-12' >
+                            Πολλαπλης<input type='radio' id='type1' name='type' value='1' checked>
+                            Σωστό/λάθος<input type='radio' id='type2' value='2' name='type'>
+                            Συμπλήρωσης<input type='radio' id='type3' value='3' name='type'>
                         </div>
-                        <div class='apantisis'>
-                        <p>απαντηση 1</p><input class='ans' type='text' name='ans1'>
-                        <p>απαντηση 2</p><input class='ans' type='text' name='ans2'>
-                        <p>απαντηση 3</p><input class='ans' type='text' name='ans3'>
-                        <p>απαντηση 4</p><input class='ans' type='text' name='ans4'>
-                        </div>
-                        <p>Valid Question</p>
-                        <select aria-label="valid" name="valid" class='valid' id="valid" title="valid">
-                            <option class="option" value="1">1</option>
-                            <option class="option" value="1">2</option>
-                            <option class="option" value="1">3</option>
-                            <option class="option" value="1">4</option>
-                        </select>
-                        <div class='dyskolia'>
-                            Easy<input type='radio' name='diff' value='1' checked>
-                            Medium<input type='radio'  value='2' name='diff'>
-                            Hard<input type='radio'  value='3' name='diff'>
-                        </div>
-                        
-                        <input type='submit'>
-
-                        </div>
-
+            
                     </form>
                 </div>
             </div>
         </body>
         <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
         <script src='scripts/darkmode.js'></script>
+        <script src='scripts/show_the_type.js'></script>
 
     </html>

@@ -11,7 +11,7 @@
         if($result)
             for($i =0;$i<mysqli_num_rows($result);$i++){
                 $row = mysqli_fetch_array($result);
-                echo $row['name'] .'^' .$row['ans1'].'^' .$row['ans2'].'^' .$row['ans3'].'^' .$row['ans4'] .'^' .$row['right_quest'] .'^' .$row['difficult']  .'#' ;  //gia na jexwrisw meta sto js
+                echo $row['name'] .'^' .$row['ans1'].'^' .$row['ans2'].'^' .$row['ans3'].'^' .$row['ans4'] .'^' .$row['right_quest'] .'^' .$row['difficult']  .'^' .$row['type'].'#' ;  //gia na jexwrisw meta sto js
             }
                    
         mysqli_close($con);

@@ -20,9 +20,10 @@
         $ans4=$row['ans4'];
         $diff=$row['diff'];
         $valid=$row['valid'];
+        $type=$row['type'];
 
-           $sql_insert="INSERT INTO questions (name,ans1,ans2,ans3,ans4,right_quest,difficult)
-           VALUES ('$quest','$ans1','$ans2','$ans3','$ans4','$valid','$diff')"; //vale to sto quiz
+           $sql_insert="INSERT INTO questions (name,ans1,ans2,ans3,ans4,right_quest,difficult,type)
+           VALUES ('$quest','$ans1','$ans2','$ans3','$ans4','$valid','$diff','$type')"; //vale to sto quiz
            mysqli_query($con,$sql_insert);
 
            $sql_delete = mysqli_query($con,"DELETE FROM temp_questions WHERE question='$name_quest'"); //svise to apo to temp
