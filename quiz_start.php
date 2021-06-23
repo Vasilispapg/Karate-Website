@@ -61,21 +61,17 @@ $_SESSION['diff']="1";?>
                             <span class="timer">Timer: 20 sec</span>
                         </div>
                         <div class="footer">
-                            <a href='quiz.php' id='start' class='start'>Start</a>
+                            <a href='quiz.php' id='start' class='start'>Start</a><br>
+                            <a id='easy' style="background-color:green;" class="lvl_button start">Easy</a>
+                            <a id='med' class="lvl_button start">Medium</a>
+                            <a id='hard' class="lvl_button start">Hard</a><br>
+                            <?php if(isset($_SESSION['username']))
+                                echo "<a href=\"addQuestions.php\" class=\"qu_button start\">Add questions</a>";
+                            ?>
                         </div>
                         
                     </div>  
-                    <div class="qa_level">
-                        <a id='easy' style="background-color:green;" class="lvl_button">Easy</a>
-                        <a id='med' class="lvl_button">Medium</a>
-                        <a id='hard' class="lvl_button">Hard</a>
-                    </div>
-                    <div class="qa_newq">
-                    <?php if(isset($_SESSION['username']))
-                        echo "<a href=\"addQuestions.php\" class=\"qu_button\">Add questions</a>";
-                    ?>
-                        
-                    </div>
+                    
                
                 </div>
             </div>

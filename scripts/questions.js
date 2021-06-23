@@ -92,7 +92,7 @@ function createAnswers(q, id, count) {
     var input_radio = document.createElement("input");
     input_radio.type = 'radio';
     input_radio.name = 'q' + id;
-    if (q[6] == 1 || q[6] == 3) {
+    if (q[7] == 1 || q[7] == 3) {
         if (count == q[5]) //einai i swsti apantisi
             input_radio.setAttribute('valid', "valid");
         var span = document.createElement("span");
