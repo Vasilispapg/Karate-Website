@@ -89,8 +89,9 @@ session_start(); ?>
                             </select>';
                         }
                         else{
-                            echo '<p id="textarea">Απαντηση</p>
-                            <input type="text" id="textarea" name="textarea" class="ans" style="height: 100px;">';
+                            $textarea=$_SESSION['ans1'];
+                            echo "<p id='textarea'>Απαντηση</p>
+                            <input type='text' id='textarea' name='textarea' class='ans' style='height: 100px;' value='$textarea'>";
                         }
                         ?>
                         <?php  
@@ -160,6 +161,5 @@ session_start(); ?>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script src='scripts/darkmode.js'></script>
-<script src='scripts/fill_the_question_edit.js'></script>
 
 </html>

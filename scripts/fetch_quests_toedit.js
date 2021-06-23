@@ -7,7 +7,7 @@ function editTheQuestions() {
 
             var result = xmlhttp.responseText; //pairnw apantisi apo php
             var users = result.split('#'); //spaw toys xristes
-
+            console.log(users);
             users = users.filter(Boolean); //katharizw ta kena poy yparxei apo to split !important
             console.log(users)
             users.forEach(element => {

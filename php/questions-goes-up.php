@@ -33,5 +33,5 @@ session_start();
 
     mysqli_query($con,$sql);
     mysqli_close($con);
-    header("location:../index.php")
+    // header("location:../index.php")
 ?>

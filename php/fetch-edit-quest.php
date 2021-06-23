@@ -21,7 +21,12 @@ session_start();
            $_SESSION['ans4']=$row['ans4'];
            $_SESSION['diff']=$row['diff'];
            $_SESSION['valid']=$row['valid'];
-           $_SESSION['type']=$row['type'];
+           $_SESSION['type']=$row['type']; 
+            
+
+
+           //pairnw mono to onoma me questions-goes-down, meta me js ftiaxnw to edit-quests,
+           // molis to patisw to edit, mpainw edw ta vazw ola se session kai meta ta emfanizw sto editing-quests
 
         }
     }
