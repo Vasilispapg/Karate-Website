@@ -64,58 +64,72 @@ session_start(); ?>
                             echo "<input class='ans' type='text' name='quest' value=\"$question\">";
                         ?>
                         </div>
-                        <div class='apantisis'>
-                        <p>απαντηση 1</p>
-                        <?php
-                            $ans1=$_SESSION['ans1'];
-                            echo "<input class='ans' type='text' name='ans1' value='$ans1'>";
+                        <?php 
+                        if($_SESSION['type']=='1'){
+                            echo "<div class='apantisis'>";
+                            echo "<p>απαντηση 1</p>";
+                                $ans1=$_SESSION['ans1'];
+                                echo "<input class='ans' type='text' name='ans1' value='$ans1'>
+                            <p>απαντηση 2</p>";
+                                $ans2=$_SESSION['ans2'];
+                                echo "<input class='ans' type='text' name='ans2' value='$ans2'>
+                            <p>απαντηση 3</p>";
+                                $ans3=$_SESSION['ans3'];
+                                echo "<input class='ans' type='text' name='ans3' value='$ans3'>
+                            <p>απαντηση 4</p>";
+                                $ans4=$_SESSION['ans4'];
+                                echo "<input class='ans' type='text' name='ans4' value='$ans4'>
+                            </div>";
+                        }
+                        else if($_SESSION['type']==3){
+                            echo'<p id="valid">True or False</p>
+                            <select aria-label="valid" name="valid" class="valid"  id="select" title="valid">
+                            <option class="option" value="1">True</option>
+                            <option class="option" value="2">False</option>
+                            </select>';
+                        }
+                        else{
+                            echo '<p id="textarea">Απαντηση</p>
+                            <input type="text" id="textarea" name="textarea" class="ans" style="height: 100px;">';
+                        }
                         ?>
-                        <p>απαντηση 2</p><?php
-                            $ans2=$_SESSION['ans2'];
-                            echo "<input class='ans' type='text' name='ans2' value='$ans2'>";
-                        ?>
-                        <p>απαντηση 3</p><?php
-                            $ans3=$_SESSION['ans3'];
-                            echo "<input class='ans' type='text' name='ans3' value='$ans3'>";
-                        ?>
-                        <p>απαντηση 4</p><?php
-                            $ans4=$_SESSION['ans4'];
-                            echo "<input class='ans' type='text' name='ans4' value='$ans4'>";
-                        ?>
-                        </div>
-                        <p>Valid Question</p>
-                        <?php if($_SESSION['valid']==1){
-                            echo ' <select aria-label="valid" name="valid" class=\'valid\' id="valid" title="valid"> 
-                            <option class="option" value="1" selected>1</option> 
-                            <option class="option" value="2">2</option> 
-                            <option class="option" value="3">3</option> 
-                            <option class="option" value="4">4</option> 
-                                </select>';
-                            }
-                            else if($_SESSION['valid']==2){
+                        <?php  
+                        if($_SESSION['type']==1){
+                            echo"<p>Valid Question</p>";
+                            if($_SESSION['valid']==1){
                                 echo ' <select aria-label="valid" name="valid" class=\'valid\' id="valid" title="valid"> 
-                                <option class="option" value="1">1</option> 
-                                <option class="option" value="2" selected >2</option> 
+                                <option class="option" value="1" selected>1</option> 
+                                <option class="option" value="2">2</option> 
                                 <option class="option" value="3">3</option> 
                                 <option class="option" value="4">4</option> 
                                     </select>';
                                 }
-                            else if($_SESSION['valid']==3){
-                                echo ' <select aria-label="valid" name="valid" class=\'valid\' id="valid" title="valid"> 
-                                <option class="option" value="1">1</option> 
-                                <option class="option" value="2" >2</option> 
-                                <option class="option" value="3" selected>3</option> 
-                                <option class="option" value="4">4</option> 
-                                    </select>';
-                                }    
-                                else if($_SESSION['valid']==4){
+                                else if($_SESSION['valid']==2){
+                                    echo ' <select aria-label="valid" name="valid" class=\'valid\' id="valid" title="valid"> 
+                                    <option class="option" value="1">1</option> 
+                                    <option class="option" value="2" selected >2</option> 
+                                    <option class="option" value="3">3</option> 
+                                    <option class="option" value="4">4</option> 
+                                        </select>';
+                                    }
+                                else if($_SESSION['valid']==3){
                                     echo ' <select aria-label="valid" name="valid" class=\'valid\' id="valid" title="valid"> 
                                     <option class="option" value="1">1</option> 
                                     <option class="option" value="2" >2</option> 
-                                    <option class="option" value="3">3</option> 
-                                    <option class="option" value="4" selected>4</option> 
+                                    <option class="option" value="3" selected>3</option> 
+                                    <option class="option" value="4">4</option> 
                                         </select>';
-                                    }   
+                                    }    
+                                    else if($_SESSION['valid']==4){
+                                        echo ' <select aria-label="valid" name="valid" class=\'valid\' id="valid" title="valid"> 
+                                        <option class="option" value="1">1</option> 
+                                        <option class="option" value="2" >2</option> 
+                                        <option class="option" value="3">3</option> 
+                                        <option class="option" value="4" selected>4</option> 
+                                            </select>';
+                                        }   
+                        }
+
                             ?>
                         <div class='dyskolia'>
                             <?php 
@@ -136,12 +150,6 @@ session_start(); ?>
                             }  
                             ?>
                         </div>
-
-                        <!--ΘΕΛΕΙ ΑΚΟΜΑ ΝΑ ΠΡΟΣΘΕΣΩ ΤΙΚ ΟΤΙ ΤΟ ΔΕΧΕΤΑΙ
-                            ΘΕΛΕΙ ΟΤΑΝ ΠΑΤΑΣ SUBMIT ΝΑ ΑΛΛΑΖΟΥΝ ΤΑ ΔΕΔΟΜΕΝΑ
-                            ΠΡΟΦΙΛΕ ΝΑ ΕΜΦΑΝΙΖΕΙ ΤΑ ΑΠΟΤΕΛΕΣΜΑΤΑ ΜΕ JS
-                        -->
-                        
                         <input type='submit'>
 
                         </div>

@@ -43,7 +43,7 @@ function createNewQuestion(q, id) {
     var type = q[7];
     //prwti apantisi
     //1 -> pollaplhs, 2->keimeno, 3->swsto/lathos
-    if (q[6] == 1 || q[6] == 3 || g[6] == 2) {
+    if (q[6] == 1 || q[6] == 3 || q[6] == 2) {
         var ans1 = createAnswers(q, id, 1); //ola ta eidh theloun thn prwth erwthsh
         div_quest.appendChild(ans1);
 

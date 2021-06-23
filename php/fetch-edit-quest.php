@@ -21,6 +21,7 @@ session_start();
            $_SESSION['ans4']=$row['ans4'];
            $_SESSION['diff']=$row['diff'];
            $_SESSION['valid']=$row['valid'];
+           $_SESSION['type']=$row['type'];
 
         }
     }
