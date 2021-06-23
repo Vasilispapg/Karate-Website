@@ -139,6 +139,11 @@ div.name_quest {
 img.edit-img {
     isolation: inherit;
     width: 2em;
+    margin-left: 3%;
+}
+
+img#delete-img {
+    width: 1.5em;
 }
 
 div.edits {

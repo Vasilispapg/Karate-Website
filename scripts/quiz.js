@@ -8,7 +8,7 @@ function init() {
     var duration = 0;
 
     var qa_quest = document.querySelectorAll('.qa_quest');
-    var qa_answer = document.querySelectorAll('.qa_quest .qa_answer input');
+    var qa_answer = document.querySelectorAll('.qa_quest .qa_answer input[type=\'radio\'],input[type=\'submit\']'); //τα radio kai to submit mono
 
     var points = Math.round(100 / (qa_quest.length - 1));
 
@@ -16,19 +16,36 @@ function init() {
         step();
         duration = 0
         scoreCount -= (points - 10);
-        checks_for_points();
+        checks_for_points(); //gia na min xanw ta bounds
     });
 
     qa_answer.forEach(function(qaAnswerSignle) {
+        if (qaAnswerSignle.type == 'submit') {
+            //prepei na to ftiaxw gt dn allazei to opacity otan erthei i seira toys
+            document.getElementById('textarea').style.opacity = '100';
+            document.getElementById('submit').style.opacity = '100';
+            document.getElementById('textarea').style.position = 'relative';
+            document.getElementById('submit').style.position = 'relative'; //done
+        }
         qaAnswerSignle.addEventListener('click', function() {
-            setTimeout(function() {
+            setTimeout(function() { //ama teleiwsei o xronos
                 step();
                 duration = 0;
             }, 300);
 
             var valid = this.getAttribute('valid');
+
+            if (qaAnswerSignle.type == 'submit') { //an patiseis submit
+                let ans = document.getElementById('textarea').value; //pairnw to value
+
+                if (ans == qaAnswerSignle.getAttribute('valid')) { //an einai idia tote correct
+                    scoreCount += points;
+                } else {
+                    scoreCount -= (points - 10);
+                }
+            }
             if (valid == 'valid') {
-                scoreCount += points;
+                scoreCount += points; //se periptwsi true/false ή πολλαπλων υπαρχει 1 valid
             } else {
                 scoreCount -= (points - 10);
             }
@@ -65,7 +82,7 @@ function init() {
         }
     }
 
-    var durationTime = setInterval(function() {
+    var durationTime = setInterval(function() { //rithmizetai i wra edw
         if (duration == 0) {
             duration = 20;
         }
@@ -78,7 +95,7 @@ function init() {
         }
     }, 1000)
 
-    function checks_for_points() {
+    function checks_for_points() { //gia na min xanw ta bounds
         if (scoreCount == 99) scoreCount = 100;
         if (scoreCount > 100) scoreCount = 100;
         if (scoreCount < 0) scoreCount = 0;

@@ -126,6 +126,25 @@ body {
     overflow: hidden;
 }
 
+input[type='submit']:hover {
+    background-color: red;
+}
+
+input[type='submit'] {
+    border: none;
+    outline: none;
+    width: 50%;
+    position: relative;
+    left: 25%;
+    display: block;
+    height: 40px;
+    color: #fff;
+    background-color: #262626;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    /* για να δειχνει το ποντικι οτι μπορει να πατηθει το κουμπι*/
+}
+
 
 /* Quiz */
 

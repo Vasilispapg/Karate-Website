@@ -143,11 +143,16 @@ div.role {
 img.edit-img {
     isolation: inherit;
     width: 2em;
+    margin-left: 3.0%;
+}
+
+img#delete-img {
+    width: 1.5em;
 }
 
 div.edits {
     padding-left: 1%;
-    margin-top: 2%;
+    margin-top: 1.5%;
 }
 
 @media screen and (max-width:925px) {

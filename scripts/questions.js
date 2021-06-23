@@ -43,6 +43,7 @@ function createNewQuestion(q, id) {
     var type = q[7];
     //prwti apantisi
     //1 -> pollaplhs, 2->keimeno, 3->swsto/lathos
+
     if (q[6] == 1 || q[6] == 3 || q[6] == 2) {
         var ans1 = createAnswers(q, id, 1); //ola ta eidh theloun thn prwth erwthsh
         div_quest.appendChild(ans1);
@@ -57,13 +58,38 @@ function createNewQuestion(q, id) {
         var ans4 = createAnswers(q, id, 4);
         div_quest.appendChild(ans3);
         div_quest.appendChild(ans4);
+    } else if (type == 2) {
+
+        let div = document.createElement("div");
+        div.style.display = 'flex';
+        div.style.flexDirection = 'column';
+        div.className = 'qa_answer'
+
+        let submit = document.createElement("input");
+        submit.type = 'submit';
+        submit.id = 'submit';
+        submit.style.marginTop = "5%";
+
+        let textarea = document.createElement("input");
+        textarea.type = 'text';
+        textarea.id = 'textarea';
+        textarea.className = 'textarea';
+        textarea.style.width = '400px';
+        textarea.style.height = '100px'
+
+        div.appendChild(textarea);
+        div.appendChild(submit);
+
+        submit.setAttribute("valid", q[1]);
+
+        div_quest.appendChild(div);
+
     }
-
-
-
 
     return div_quest;
 }
+
+
 
 function shuffle(array) {
     var currentIndex = array.length,
@@ -93,17 +119,13 @@ function createAnswers(q, id, count) {
     input_radio.type = 'radio';
     input_radio.name = 'q' + id;
     if (q[7] == 1 || q[7] == 3) {
-        if (count == q[5]) //einai i swsti apantisi
+        if (count == q[5]) //einai i swsti apantisi q5='valid stin sql'
             input_radio.setAttribute('valid', "valid");
         var span = document.createElement("span");
         span.innerHTML = q[count];
         div_ans1.appendChild(input_radio);
         div_ans1.appendChild(span);
     }
-
-
-
-
 
 
     return div_ans1;
