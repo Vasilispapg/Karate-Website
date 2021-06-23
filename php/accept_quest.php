@@ -14,21 +14,27 @@
            $row= mysqli_fetch_array($result);
 
         $quest=$row['question'];
-        $ans1=$row['ans1'];
-        $ans2=$row['ans2'];
-        $ans3=$row['ans3'];
-        $ans4=$row['ans4'];
         $diff=$row['diff'];
-        $valid=$row['valid'];
         $type=$row['type'];
         
-        if($type!=2){
+        if($type==1){
+            $valid=$row['valid'];
+            $ans1=$row['ans1'];
+            $ans2=$row['ans2'];
+            $ans3=$row['ans3'];
+            $ans4=$row['ans4'];
             $sql_insert="INSERT INTO questions (name,ans1,ans2,ans3,ans4,right_quest,difficult,type)
             VALUES ('$quest','$ans1','$ans2','$ans3','$ans4','$valid','$diff','$type')"; //vale to sto quiz
         }
-        else{
+        else if($type==3){
+            $valid=$row['valid'];
             $sql_insert="INSERT INTO questions (name,ans1,ans2,ans3,ans4,right_quest,difficult,type)
-            VALUES ('$quest','$ans1','$ans2','$ans3','$ans4','$valid','$diff','$type')"; //vale to sto quiz
+            VALUES ('$quest','True','False','','','$valid','$diff','$type')"; //vale to sto quiz
+        }
+        else{
+            $ans1=$row['ans1'];
+             $sql_insert="INSERT INTO questions (name,ans1,ans2,ans3,ans4,right_quest,difficult,type)
+            VALUES ('$quest','$ans1','','','','1','$diff','$type')"; //vale to sto quiz
         }
            
            mysqli_query($con,$sql_insert);
