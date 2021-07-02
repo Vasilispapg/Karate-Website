@@ -168,7 +168,10 @@ function dyskolia() {
     diff.className = 'dyskolia';
     diff.id = 'dyskolia'
 
-    // diff.appendChild("Easy")
+
+    Easy = document.createElement('h4');
+    Easy.innerHTML = 'Easy';
+    diff.appendChild(Easy)
 
     var easy_input = document.createElement('input');
     easy_input.name = 'diff';
@@ -177,8 +180,9 @@ function dyskolia() {
     easy_input.type = 'radio';
     diff.appendChild(easy_input)
 
-    // diff.appendChild("Medium")
-
+    Medium = document.createElement('h4');
+    Medium.innerHTML = 'Medium';
+    diff.appendChild(Medium)
     var med_input = document.createElement('input');
     med_input.name = 'diff';
     med_input.value = '2';
@@ -186,7 +190,9 @@ function dyskolia() {
     med_input.type = 'radio';
     diff.appendChild(med_input)
 
-    // diff.appendChild("Hard")
+    hard = document.createElement('h4');
+    hard.innerHTML = 'Hard';
+    diff.appendChild(hard)
     var hard_input = document.createElement('input');
     hard_input.name = 'diff';
     hard_input.value = '3';

@@ -166,7 +166,15 @@ p {
 
 .dyskolia {
     margin: 3% 0;
-    left: 40%;
+    left: 25%;
+    transform: scale(1.5);
+    position: relative;
+    display: -webkit-box;
+}
+
+.type {
+    margin: -4% 0 3% 0;
+    left: 25%;
     transform: scale(1.5);
     position: relative;
 }

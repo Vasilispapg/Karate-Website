@@ -55,7 +55,7 @@ session_start();
                 <div class="row">
                     <div class="mainIntro">
                         <h1 class="col-12 mainTitle">JKA Karate</h1>
-                        <h4 class="col-12 name">Vasilis Papagrigoriou</h4>
+                        <h4 class="col-12 name" id='one'></h4>
                     </div>
                     <video class="videos" autoplay preload="auto" muted loop>
                     <source src="media\video\intro_vi.mp4" type="video/mp4">
@@ -83,5 +83,13 @@ session_start();
         </body>
         <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
         <script src='scripts/darkmode.js'></script>
+        <script src='index.js'></script>
+        <script>
+        ityped.init(document.getElementById('one'),{
+            showCursor:true,
+            strings:['Βασίλης Παπαγρηγορίου','Ξένια Μότση']
+        })
+        
+        </script>
 
     </html>

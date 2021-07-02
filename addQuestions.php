@@ -56,7 +56,7 @@ session_start();?>
 
                     <form class='col-6' action="php\questions-goes-up.php" id='form' method="post">
                         <div class='inside_form' id='inside_form'>
-                        <div class='dyskolia col-12' >
+                        <div class='type col-12' >
                             Πολλαπλης<input type='radio' id='type1' name='type' value='1' checked>
                             Σωστό/λάθος<input type='radio' id='type2' value='2' name='type'>
                             Συμπλήρωσης<input type='radio' id='type3' value='3' name='type'>

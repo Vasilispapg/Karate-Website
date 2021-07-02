@@ -107,6 +107,10 @@ div.row {
 
 div.mainIntro {
     margin-top: -4%;
+    /*gia na min kanei ta jumps*/
+    height: 150px;
+    padding: 10px;
+    /*gia na min kanei ta jumps to ityped */
 }
 
 h1.mainTitle {
@@ -235,6 +239,7 @@ span.social_media {
     .videos {
         width: 100%;
         margin: 0 auto;
+        margin-top: 10%;
     }
     a.more_link {
         margin-top: 15%;
@@ -251,7 +256,7 @@ span.social_media {
         padding-left: 5%;
     }
     h1.mainTitle {
-        padding-top: 2em;
+        margin-top: -1%
     }
     span.introduction {
         display: block;
