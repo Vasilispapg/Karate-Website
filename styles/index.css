@@ -207,10 +207,16 @@ span.social_media {
         font-size: 1.4em;
     }
     h1.mainTitle {
-        font-size: 5em;
+        font-size: 4em;
     }
     p.aboutme {
         margin-top: 6%
+    }
+    .name {
+        margin-top: -1%;
+    }
+    .videos {
+        margin-top: 1%
     }
 }
 
