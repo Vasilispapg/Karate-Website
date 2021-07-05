@@ -67,12 +67,12 @@ function createNewQuestion(q, id) {
 
         let submit = document.createElement("input");
         submit.type = 'submit';
-        submit.id = 'submit';
+        submit.id = 'submit' + id;
         submit.style.marginTop = "5%";
 
         let textarea = document.createElement("input");
         textarea.type = 'text';
-        textarea.id = 'textarea';
+        textarea.id = 'textarea' + id;
         textarea.className = 'textarea';
         textarea.style.width = '400px';
         textarea.style.height = '100px'

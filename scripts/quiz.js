@@ -6,11 +6,13 @@ function init() {
     var count = 0;
     var scoreCount = 0;
     var duration = 0;
+    var counter_of_text_area = 0;
 
     var qa_quest = document.querySelectorAll('.qa_quest');
-    var qa_answer = document.querySelectorAll('.qa_quest .qa_answer input[type=\'radio\'],input[type=\'submit\']'); //τα radio kai to submit mono
+    var qa_answer = document.querySelectorAll('.qa_quest .qa_answer input[type=\'radio\'],input[type=\'submit\'], input[type=\'text\']'); //τα radio kai to submit mono
 
     var points = Math.round(100 / (qa_quest.length - 1));
+
 
     skip.addEventListener('click', function() {
         step();
@@ -19,39 +21,38 @@ function init() {
         checks_for_points(); //gia na min xanw ta bounds
     });
 
-    qa_answer.forEach(function(qaAnswerSignle) {
-        if (qaAnswerSignle.type == 'submit') {
+    qa_answer.forEach(function(qaAnswerSingle) {
+        if (qaAnswerSingle.type == 'submit' || qaAnswerSingle.type == 'text') {
             //prepei na to ftiaxw gt dn allazei to opacity otan erthei i seira toys
-            document.getElementById('textarea').style.opacity = '100';
-            document.getElementById('submit').style.opacity = '100';
-            document.getElementById('textarea').style.position = 'relative';
-            document.getElementById('submit').style.position = 'relative'; //done
+            qaAnswerSingle.style.opacity = '100';
+            qaAnswerSingle.style.position = 'relative';
         }
-        qaAnswerSignle.addEventListener('click', function() {
-            setTimeout(function() { //ama teleiwsei o xronos
-                step();
-                duration = 0;
-            }, 300);
+        if (qaAnswerSingle.type != 'text')
+            qaAnswerSingle.addEventListener('click', function() {
+                setTimeout(function() { //ama teleiwsei o xronos
+                    step();
+                    duration = 0;
+                }, 300);
 
-            var valid = this.getAttribute('valid');
+                var valid = this.getAttribute('valid');
 
-            if (qaAnswerSignle.type == 'submit') { //an patiseis submit
-                let ans = document.getElementById('textarea').value; //pairnw to value
-
-                if (ans == qaAnswerSignle.getAttribute('valid')) { //an einai idia tote correct
-                    scoreCount += points;
+                if (qaAnswerSingle.type == 'submit') { //an patiseis submit
+                    let ans = document.querySelectorAll("[id^='textarea']"); //pairnw to value
+                    if (ans[counter_of_text_area].value == qaAnswerSingle.getAttribute('valid')) { //an einai idia tote correct
+                        scoreCount += points;
+                    } else {
+                        scoreCount -= (points - 10);
+                    }
+                    counter_of_text_area += 1;
+                }
+                if (valid == 'valid') {
+                    scoreCount += points; //se periptwsi true/false ή πολλαπλων υπαρχει 1 valid
                 } else {
                     scoreCount -= (points - 10);
                 }
-            }
-            if (valid == 'valid') {
-                scoreCount += points; //se periptwsi true/false ή πολλαπλων υπαρχει 1 valid
-            } else {
-                scoreCount -= (points - 10);
-            }
 
-            checks_for_points();
-        })
+                checks_for_points();
+            })
     })
 
 
