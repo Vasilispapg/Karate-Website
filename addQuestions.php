@@ -53,7 +53,6 @@ session_start();?>
                         <img src='media/background.jpg'>
                     </div>
                 <div class="row">
-
                     <form class='col-6' action="php\questions-goes-up.php" id='form' method="post">
                         <div class='inside_form' id='inside_form'>
                         <div class='type col-12' >

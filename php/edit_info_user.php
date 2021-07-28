@@ -43,7 +43,6 @@
           if (mysqli_query($con, $sql))
             $_SESSION['image']=$img;
         }//image
-
         if (empty($psw)) {
             $sql="UPDATE users SET email='".$email."',phone='".$phone."',
             bdate='".$bdate."',sex='".$sex."' WHERE username='".$username."'"; 

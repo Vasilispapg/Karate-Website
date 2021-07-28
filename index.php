@@ -21,7 +21,7 @@ session_start();
                     </div>
                     <?php
                         if(isset($_SESSION['role'])&&$_SESSION['role']==3){
-                        echo" <hr style=\"width:75%;\" >";
+                            echo" <hr style=\"width:75%;\" >";
                         }
                         else{
                         echo "<hr>";
@@ -83,7 +83,7 @@ session_start();
         </body>
         <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
         <script src='scripts/darkmode.js'></script>
-        <script src='index.js'></script>
+        <script src='scripts/index.js'></script>
         <script>
         ityped.init(document.getElementById('one'),{
             showCursor:true,

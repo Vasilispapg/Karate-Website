@@ -16,7 +16,7 @@ session_start();
         $ans3=$_POST['ans3'];
         $ans4=$_POST['ans4'];  
         $valid=$_POST['valid'];
-    
+        $sql="SELECT * FROM temp_questions WHERE ans1= '".$user."' ";
         $sql="INSERT INTO temp_questions (question,ans1,ans2,ans3,ans4,diff,valid,type)
         VALUES ('$quest','$ans1','$ans2','$ans3','$ans4','$diff','$valid','1')";
     }
